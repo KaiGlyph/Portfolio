@@ -8,8 +8,8 @@
 
 @font-face {
   font-family: 'Kenyan';
-  src: url('Tipografias/Kenyan/KenyanCoffee-Regular.woff') format('woff');
-  src: url('Tipografias/Kenyan/KenyanCoffee-Regular.woff2') format('woff2');
+  src: url('Fonts/Kenyan/KenyanCoffee-Regular.woff') format('woff');
+  src: url('Fonts/Kenyan/KenyanCoffee-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,8 +17,8 @@
 @font-face {
 
   font-family: 'Unageo';
-  src: url('Tipografias/Unageo/Unageo-Regular.woff') format('woff');
-  src: url('Tipografias/Unageo/Unageo-Regular.woff2') format('woff2');
+  src: url('Fonts/Unageo/Unageo-Regular.woff') format('woff');
+  src: url('Fonts/Unageo/Unageo-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   
@@ -640,3 +640,5 @@ footer a:hover {
     fill: currentColor;
     vertical-align: middle;
 }
+
+
