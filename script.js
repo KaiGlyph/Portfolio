@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "MySQL (Nivel Bajo)",
       text: "Capacidad para ejecutar consultas simples y comprender estructuras de bases de datos relacionales.",
       level: "low"
+    },
+    powerplatform: {
+      title: "Power Platform (Nivel Bajo)",
+      text: "Familiarizado con la creación básica de aplicaciones en Power Apps, flujos simples en Power Automate y uso inicial de Dataverse.",
+      level: "low"
     }
   };
 

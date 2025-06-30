@@ -163,7 +163,7 @@ header img{
     margin-top: 3%;
     margin-right: 6%;
     margin-left: 13%;
-    width: 40%;
+    width: 66%;
 }
 
 .skills h3 {
@@ -174,7 +174,7 @@ header img{
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
     gap: 0.8rem;
 }
 
