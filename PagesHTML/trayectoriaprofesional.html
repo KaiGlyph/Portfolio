@@ -10,68 +10,73 @@
 </head>
 <body>
   <nav class="navbar">
-      <div class="navname">
-        <a href="../index.html">
-          <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
-          <h2>Jordi Gallardo</h2>
-        </a>
-      </div>
-      <div class="navmenu">
-        <ul>
-          <li><a href="../index.html#home">Home</a></li>
-          <li class="submenu-parent">
-            <a href="../index.html#about">Sobre Mí</a>
-            <ul class="submenu">
-              <li class="submenu-parent">
-                <a href="../index.html#about">Trayectorias</a>
-                <ul class="submenu">
-                  <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
-                  <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="../index.html#proyects">Proyectos</a></li>
-          <li><a href="../index.html#teamwork">Valoraciones</a></li>
-          <li><a href="../index.html#contact">Contáctame</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <main class="trayectoria">
+    <div class="navname">
+      <a href="../index.html">
+        <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
+        <h2>Jordi Gallardo</h2>
+      </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navmenu">
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li class="submenu-parent">
+          <a href="../index.html#about">Sobre Mí</a>
+          <ul class="submenu">
+            <li class="submenu-parent">
+              <a href="../index.html#about">Trayectorias</a>
+              <ul class="submenu">
+                <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
+                <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../index.html#proyects">Proyectos</a></li>
+        <li><a href="../index.html#teamwork">Valoraciones</a></li>
+        <li><a href="../index.html#contact">Contáctame</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main class="trayectoria">
     <header class="intro-trayectoria">
         <h1>Trayectoria Profesional</h1>
     </header>
 
     <!-- Bloque: Experiencia Laboral -->
     <section class="bloque-trabajo" id="experiencia">
-        <h2 class="bloque-titulo">Experiencia Laboral</h2>
+      <h2 class="bloque-titulo">Experiencia Laboral</h2>
 
-        <!-- Trabajo actual -->
-        <section class="etapa">
+      <!-- Trabajo actual -->
+      <section class="etapa">
         <div class="etapa-header">
             <img src="../Images/Trayectoria/Logo-ONIZEA.png" alt="Empresa actual">
             <h2>Maquetador Web & Low‑Code (2025)</h2>
         </div>
         <p>Actualmente trabajo como maquetador web, aplicando HTML, CSS y JS en el marco de formación para obtener la titulación de Programador Junior. También desarrollo en entorno low‑code con Power Platform (Power Apps, Power Automate) y he recibido nociones de PHP, Python y MySQL.</p>
-        </section>
+      </section>
 
-        <!-- Trabajo anterior -->
-        <section class="etapa">
+      <!-- Trabajo anterior -->
+      <section class="etapa">
         <div class="etapa-header">
             <img src="../Images/Trayectoria/Logo-Komttech.jpg" alt="Sistemas AntiIncendios">
             <h2>Técnico Electrónica | Sistemas Contra Incendios</h2>
         </div>
         <p>En esta empresa me dediqué al montaje electrónico de detectores antiincendios: colocación de componentes y soldadura por ola. Fue una experiencia que reforzó mi precisión técnica y atención al detalle.</p>
-        </section>
+      </section>
     </section>
 
     <!-- Bloque: Formación Académica -->
     <section class="bloque-estudios" id="formacion">
-        <h2 class="bloque-titulo">Formación Académica</h2>
+      <h2 class="bloque-titulo">Formación Académica</h2>
 
-        <!-- Ciclo Superior -->
-        <section class="etapa">
+      <!-- Ciclo Superior -->
+      <section class="etapa">
         <div class="etapa-header">
             <img src="../Images/Trayectoria/Logo-InstitutEscolaTreball.png" alt="Automatismos y Robótica">
             <h2>Ciclo Superior: Automatismos y Robótica Industrial</h2>
@@ -90,10 +95,10 @@
             <p>Sistema básico de lógica neumática para entender compuertas y válvulas.</p>
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Sistema Neumático" allowfullscreen></iframe>
         </div>
-        </section>
+      </section>
 
-        <!-- Ciclo Medio -->
-        <section class="etapa">
+      <!-- Ciclo Medio -->
+      <section class="etapa">
         <div class="etapa-header">
             <img src="../Images/Trayectoria/Logo-InstitutEscolaTreball.png" alt="Instalaciones Eléctricas">
             <h2>Ciclo Medio: Instalaciones Eléctricas y Automáticas</h2>
@@ -112,24 +117,26 @@
             <p>Cuadro eléctrico con contactores, temporizadores y protección.</p>
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Cuadro Eléctrico" allowfullscreen></iframe>
         </div>
-        </section>
+      </section>
 
-        <!-- ESO -->
-        <section class="etapa">
+      <!-- ESO -->
+      <section class="etapa">
         <div class="etapa-header">
             <img src="../Images/Trayectoria/Logo-InstitutMartiDot.png" alt="ESO">
             <h2>Educación Secundaria Obligatoria (ESO)</h2>
         </div>
         <p>Formación general que cimentó mis bases en tecnología y ciencias.</p>
         <a href="../Documentos/Titulacion_ESO.pdf" class="btn-cv" download>Descargar Titulación</a>
-        </section>
+      </section>
     </section>
-    </main>
-
+  </main>
 
   <footer>
     <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
     <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
   </footer>
+
+  <script src="../script.js"></script>
+
 </body>
 </html>
