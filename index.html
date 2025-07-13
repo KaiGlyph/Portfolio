@@ -9,22 +9,34 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navname">
-            <a href="#home">
-                <img src="Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo" title="Jordi Gallardo">
-                <h2>Jordi Gallardo</h2>
-            </a>
-        </div>
-        <div class="navmenu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#proyects">Proyectos</a></li>
-                <li><a href="#teamwork">Valoraciones</a></li>
-                <li><a href="#contact">Contáctame</a></li>
+  <div class="navname">
+    <a href="../index.html">
+      <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
+      <h2>Jordi Gallardo</h2>
+    </a>
+  </div>
+  <div class="navmenu">
+    <ul>
+      <li><a href="../index.html#home">Home</a></li>
+      <li class="submenu-parent">
+        <a href="../index.html#about">Sobre Mí</a>
+        <ul class="submenu">
+          <li class="submenu-parent">
+            <a href="../index.html#about">Trayectorias</a>
+            <ul class="submenu">
+              <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
+              <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
             </ul>
-        </div>
-    </nav>
+          </li>
+        </ul>
+      </li>
+      <li><a href="../index.html#proyects">Proyectos</a></li>
+      <li><a href="../index.html#teamwork">Valoraciones</a></li>
+      <li><a href="../index.html#contact">Contáctame</a></li>
+    </ul>
+  </div>
+</nav>
+
     <header>
         <div id="home">
             <h1>Jordi Gallardo | Programador Junior</h1>
@@ -41,6 +53,8 @@
                     Sé que hay muchas personas competentes, pero a pesar de eso, pienso diferente a los demás, 
                     analizando el mismo problema desde diferentes puntos de vista.</p>
                 <p>Trabajo mejor en solitario y en frontend, pero me sé adaptar a cualquier entorno aportándome al rol que falte.</p>
+                <a href="PagesHTML/trayectoriaprofesional.html" class="btn-trayectoria">Ver Trayectoria Profesional</a>
+                <a href="" download class="btn-cv">Descargar CV</a>
             </div>
             <div class="skills">
                 <div class="skills-grid">

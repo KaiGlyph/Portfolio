@@ -1,10 +1,15 @@
-:root{
-    --color-navbackground:#0a0a0a;
-    --color-background:#0f0f0f;
-    --color-text:#ececec;
-    --color-text-hover:#aa82fa;
-    --color-primary:#412575;
+:root {
+    --color-navbackground: #0a0a0a;
+    --color-background: #0f0f0f;
+    --color-text: #ececec;
+    --color-text-hover: #aa82fa;
+    --color-primary: #412575;
+
+    --color-submenu-background: #1a1a1a;
+    --color-submenu-hover: #673fb3;
+    --color-shadow-nav: rgba(65, 37, 117, 0.6);
 }
+
 
 @font-face {
   font-family: 'Kenyan';
@@ -54,58 +59,107 @@ ul {
     list-style-type: none;
 }
 
-/*Navegcion*/
+/*Navegacion*/
 .navbar {
     display: flex;
     text-align: center;
-    justify-content:space-between;
+    justify-content: space-between;
     aspect-ratio: 16/1;
     font-size: 1.46rem;
     background-color: var(--color-navbackground);
-    box-shadow: 0 2px 10px rgb(65, 37, 117);
+    box-shadow: 0 2px 10px var(--color-shadow-nav);
     top: 0;
     position: sticky;
     z-index: 1000;
 }
-.navbar img{
+
+.navbar img {
     width: 12%;
     margin-left: 9.6%;
 }
-.navname, a{
+
+.navname, a {
     display: flex;
     align-items: center;
     padding-left: 1rem;
     gap: 1.6rem;
     transition: all 0.6s;
+    color: var(--color-text);
 }
-.navname h2{
-    font-family: 'Kenyan' , sans-serif;
+
+.navname h2 {
+    font-family: 'Kenyan', sans-serif;
     font-size: 180%;
     transition: all 0.3s;
-
+    color: var(--color-text);
 }
-.navname h2:hover{
+
+.navname h2:hover {
     color: var(--color-text-hover);
     scale: 1.01;
 }
-.navmenu{
+
+.navmenu {
     display: flex;
     align-items: center;
     padding-right: 6.6rem;
 }
-.navmenu ul{
+
+.navmenu ul {
     display: flex;
     margin: 0;
     gap: 3.6rem;
     transition: all 0.6s ease;
 }
-.navmenu ul a{
-    transition: all 0.6s ease;
 
+.navmenu ul a {
+    transition: all 0.6s ease;
+    color: var(--color-text);
 }
-.navmenu ul a:hover{
+
+.navmenu ul a:hover {
     color: var(--color-text-hover);
 }
+
+.navmenu ul li {
+    position: relative;
+}
+
+.navmenu ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-submenu-background);
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 0 8px var(--color-text-hover);
+}
+
+.navmenu ul li:hover > ul {
+    display: block;
+}
+
+.navmenu ul ul li {
+    width: 200px;
+}
+
+.navmenu ul ul a {
+    display: block;
+    padding: 10px;
+    color: var(--color-text);
+    background-color: var(--color-submenu-background);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navmenu ul ul a:hover {
+    background-color: var(--color-submenu-hover);
+    color: var(--color-background);
+}
+
 
 /*Header*/
 header{
@@ -133,6 +187,45 @@ header img{
     transition: transform 0.3s ease;
 }
 
+.navmenu ul li {
+  position: relative;
+}
+
+.navmenu ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  box-shadow: 0 0 8px #aa82fa60;
+}
+
+.navmenu ul li:hover > ul {
+  display: block;
+}
+
+.navmenu ul ul li {
+  width: 200px;
+}
+
+.navmenu ul ul a {
+  display: block;
+  padding: 10px;
+  color: #ececec;
+  text-decoration: none;
+  background-color: #1a1a1a;
+  transition: background 0.3s;
+}
+
+.navmenu ul ul a:hover {
+  background-color: #673fb3;
+}
+
+
 #about h2,
 #proyects h2,
 #teamwork h2,
@@ -157,6 +250,56 @@ header img{
     max-width: 56%;
     line-height: 192%;
 }
+
+
+.btn-trayectoria {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-text-hover);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.3);
+}
+
+.btn-trayectoria:hover {
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    box-shadow: 0 0 16px rgba(170, 130, 250, 0.6);
+    transform: scale(1.05);
+}
+
+.btn-cv {
+    display: inline-block;
+    margin-top: 1.4rem;
+    margin-left: 1rem;
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    color: var(--color-text-hover);
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-text-hover);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.15);
+}
+
+.btn-cv:hover {
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(170, 130, 250, 0.6);
+}
+
+
 
 
 .skills {
@@ -565,18 +708,22 @@ header img{
 
 /* Botón */
 #contact button {
-    width: 50%;
-    padding: 1rem;
-    margin: 0 auto;
-    border: none;
-    border-radius: 8px;
+    width: 33%;
+    display: block; 
+    margin: 3rem auto 0 auto;
+    padding: 0.8rem 1.6rem;
     background-color: var(--color-primary);
     color: var(--color-text);
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-text-hover);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.3);
 }
+
 
 #contact button:hover {
     background-color: var(--color-text-hover);
