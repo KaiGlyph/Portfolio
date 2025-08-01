@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Trayectoria Profesional | Jordi Gallardo</title>
+  <link rel="icon" href="../Images/Logos/Logo G KaiGlyph.png" type="image/svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../PagesCSS/trayectoria.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navname">
+      <a href="../index.html">
+        <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
+        <h2>Jordi Gallardo</h2>
+      </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navmenu">
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li class="submenu-parent">
+          <a href="../index.html#about">Sobre Mí</a>
+          <ul class="submenu">
+            <li class="submenu-parent">
+              <a href="../index.html#about">Trayectorias</a>
+              <ul class="submenu">
+                <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
+                <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../index.html#proyects">Proyectos</a></li>
+        <li><a href="../index.html#teamwork">Valoraciones</a></li>
+        <li><a href="../index.html#contact">Contáctame</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main class="trayectoria">
+    <header class="intro-trayectoria">
+        <h1>Trayectoria Profesional</h1>
+    </header>
+
+    <!-- Bloque: Experiencia Laboral -->
+    <section class="bloque-trabajo" id="experiencia">
+      <h2 class="bloque-titulo">Experiencia Laboral</h2>
+
+      <!-- Trabajo actual -->
+      <section class="etapa">
+        <div class="etapa-header">
+            <img src="../Images/Trayectoria/Logo-ONIZEA.png" alt="Empresa actual">
+            <h2>Maquetador Web & Low‑Code (2025)</h2>
+        </div>
+        <p>Actualmente trabajo como maquetador web, aplicando HTML, CSS y JS en el marco de formación para obtener la titulación de Programador Junior. También desarrollo en entorno low‑code con Power Platform (Power Apps, Power Automate) y he recibido nociones de PHP, Python y MySQL.</p>
+      </section>
+
+      <!-- Trabajo anterior -->
+      <section class="etapa">
+        <div class="etapa-header">
+            <img src="../Images/Trayectoria/Logo-Komttech.jpg" alt="Sistemas AntiIncendios">
+            <h2>Técnico Electrónica | Sistemas Contra Incendios</h2>
+        </div>
+        <p>En esta empresa me dediqué al montaje electrónico de detectores antiincendios: colocación de componentes y soldadura por ola. Fue una experiencia que reforzó mi precisión técnica y atención al detalle.</p>
+      </section>
+    </section>
+
+    <!-- Bloque: Formación Académica -->
+    <section class="bloque-estudios" id="formacion">
+      <h2 class="bloque-titulo">Formación Académica</h2>
+
+      <!-- Ciclo Superior -->
+      <section class="etapa">
+        <div class="etapa-header">
+          <img src="../Images/Trayectoria/Logo-InstitutEscolaTreball.png" alt="Automatismos y Robótica">
+          <h2>Ciclo Superior: Automatismos y Robótica Industrial</h2>
+        </div>
+        <p>Formación avanzada en automatización industrial, programación de PLCs, diseño de sistemas eléctricos y robótica.</p>
+        <a href="../Documentos/Titulacion_Robotica.pdf" class="btn-cv" download>Descargar Titulación</a>
+
+        <div class="video-seccion">
+          <h3>Simulación de Comunicación entre PLCs</h3>
+          <p>Video de conexión y comunicacion entre varios PLCs, haciendo que se puedan enviar informacion entre ellos para hacer el 
+              funcionamiento de automatización de cintas transportadoras.</p>
+          <iframe src="https://www.youtube.com/embed/STEQexB_HeI" title="Simulación Comunicación entre PLCs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-seccion">
+          <h3>Producción Normal de Maqueta 3D | TIA Portal</h3>
+          <p>Proceso Automatizado para hacer que marque una pieza de un color determinado (que podria ser perfectamente poner un sello) y se desplaze a otra cinta distinta.</p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/o_eH8yk_y70" title="Producción Normal Maqueta 3D  |  TIA Portal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-seccion">
+          <h3>Selección de Piezas Mediante Sensores | Factory IO</h3>
+          <p>Se hace una separación de piezas que son de diferente color, de diferente material ademas de que se contabiliza cuantas piezas de un color determinado pasan hasta llegar al puesto de control y luego las desplaza de nuevo al almacen donde se paletizarían.</p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/uveYCO0KYyM" title="Selección de Piezas Mediante Sensores  |  Factory IO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+          <h3>Paletizado | RT ToolBox3</h3>
+          <p>Se realiza el posicionamiento de cajas en un palet el cual se determina por el tamaño del palet y el de las cajas, para saber cuantas caben. Luego se simula el funcionamiento de como el brazo robot va posicionando las cajas en el palet</p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/YQGxit_a_PY" title="Practica05 Paletizado  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+          <h3>Ventana & Retrovisor | RT ToolBox3</h3>
+          <p></p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/nY0ViTSTepM" title="Practica04 Ventana &amp; Retrovisor  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+          <h3>Posicion Relativa & Def Arch | RT ToolBox3</h3>
+          <p></p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/DOA7rHYauUQ" title="Practica03 Posicion Relativa &amp; Def Arch  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+          <h3>Carburador | RT ToolBox3</h3>
+          <p></p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/OkgkKfof-DY" title="Practica02B _Carburador  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+          <h3>CortadorLaser | RT ToolBox3</h3>
+          <p></p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/4FeE8h29s_w" title="Practica02 CortadorLaser  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> 
+        <div class="video-seccion">
+          <h3>Pick & Place | RT ToolBox3</h3>
+          <p></p>
+          <iframe width="1265" height="480" src="https://www.youtube.com/embed/jplECvQGDh8" title="Practica01 Pick&amp;Place  |  RT ToolBox3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>  
+      </section>
+
+      <!-- Ciclo Medio -->
+      <section class="etapa">
+        <div class="etapa-header">
+            <img src="../Images/Trayectoria/Logo-InstitutEscolaTreball.png" alt="Instalaciones Eléctricas">
+            <h2>Ciclo Medio: Instalaciones Eléctricas y Automáticas</h2>
+        </div>
+        <p>Fundamentos de instalaciones eléctricas, automatismos básicos y montaje de cuadros eléctricos.</p>
+        <a href="../Documentos/Titulacion_Instalaciones.pdf" class="btn-cv" download>Descargar Titulación</a>
+
+        <div class="video-seccion">
+            <h3>Visualización de distancia y temperatura en pantalla lcd mediante sensor Infrarojos</h3>
+            <p></p>
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/ZkrXeJX5G0s" title="Visualización de distancia y temperatura en pantalla lcd mediante sensor Infrarojos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+            <h3>Manipulación de Servomotor mediante Sensor de Ultrasonido</h3>
+            <p></p>
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/pPAVyCssAk0" title="Manipulación de Servomotor mediante Sensor de Ultrasonidos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-seccion">
+            <h3>Manipulación de Servomotor con un Potenciometro</h3>
+            <p></p>
+            <iframe width="315" height="560" src="https://www.youtube.com/embed/6KBQsAZ4aTM" title="Manipulación de Servomotor con un Potenciometro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <!-- ESO -->
+      <section class="etapa">
+        <div class="etapa-header">
+            <img src="../Images/Trayectoria/Logo-InstitutMartiDot.png" alt="ESO">
+            <h2>Educación Secundaria Obligatoria (ESO)</h2>
+        </div>
+        <p>Formación general que cimentó mis bases en tecnología y ciencias.</p>
+        <a href="../Documentos/Titulacion_ESO.pdf" class="btn-cv" download>Descargar Titulación</a>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+    <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
+  </footer>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>

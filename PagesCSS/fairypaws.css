@@ -1,0 +1,92 @@
+header{
+    padding: 4rem 2rem;
+}
+header img {
+    width: 100%;
+    max-width: 56%;
+    margin: 2rem 4rem;
+}
+
+header img:hover {
+    transform: scale(1);
+    transition: none;
+}
+
+
+.instalacion{
+    padding: 6.6% 6%;
+}
+
+.instalacion h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.6%;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+}
+
+.instalacion p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+    max-width: 850px;
+    margin-bottom: 1.5rem;
+    margin-left: 1.6%;
+    text-align: justify;
+}
+.instalacion code {
+    background-color: #1e1e1e;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: var(--color-text-hover);
+}
+
+.pasos {
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-left: 1.5rem;
+    max-width: 880px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--color-text);
+    counter-reset: paso;
+}
+
+.pasos li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.pasos li::before {
+    content: counter(paso) ".";
+    counter-increment: paso;
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    content: none;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 300;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--color-text-hover);
+}

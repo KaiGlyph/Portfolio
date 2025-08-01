@@ -161,17 +161,3 @@ document.addEventListener('DOMContentLoaded', () => {
     carouselContainer.addEventListener('mouseenter', stopAutoScroll);
     carouselContainer.addEventListener('mouseleave', startAutoScroll);
 });
-
-// Animación de hover para la imagen del header
-document.addEventListener('DOMContentLoaded', () => {
-    const headerImg = document.querySelector('header img');
-    if (headerImg) {
-        headerImg.addEventListener('mouseenter', () => {
-            headerImg.style.transform = 'scale(1.05) rotate(2deg)';
-        });
-        
-        headerImg.addEventListener('mouseleave', () => {
-            headerImg.style.transform = 'scale(1) rotate(0deg)';
-        });
-    }
-});
