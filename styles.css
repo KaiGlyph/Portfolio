@@ -497,6 +497,30 @@ header img{
     color: #ccc;
 }
 
+.lenguajes {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+}
+
+.chip {
+    background: var(--color-submenu-hover);      
+    color: var(--color-text);           
+    padding: 4px 10px;
+    border-radius: 20px;      
+    font-size: 0.85em;
+    font-weight: 500;
+    box-shadow: 0 0 6px rgba(170, 130, 250, 0.4); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+    box-shadow: 0 0 10px rgba(170, 130, 250, 0.6);
+}
+
+
+
 /*Valoraciones*/
 .valoraciones {
     padding: 6.6% 6%;
@@ -533,7 +557,7 @@ header img{
 .testimonio {
     margin-left: 1%;
     min-width: 300px;
-    max-width: 16%;
+    max-width: 27%; /*Ajustar en caso de que se añadan mas testimonios*/
     flex: 0 0 auto;
     background-color: #1e1e1e;
     padding: 1.5rem;

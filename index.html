@@ -10,8 +10,8 @@
 <body>
     <nav class="navbar">
       <div class="navname">
-        <a href="../index.html">
-          <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
+        <a href="index.html">
+          <img src="Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
           <h2>Jordi Gallardo</h2>
         </a>
       </div>
@@ -22,15 +22,15 @@
       </div>
       <div class="navmenu">
         <ul>
-          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li class="submenu-parent">
             <a href="../index.html#about">Sobre Mí</a>
             <ul class="submenu">
               <li class="submenu-parent">
                 <a href="../index.html#about">Trayectorias</a>
                 <ul class="submenu">
-                  <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
-                  <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+                  <li><a href="/PagesHTML/trayectoriaprofesional.html#experiencia">Experiencia Laboral</a></li>
+                  <li><a href="/PagesHTML/trayectoriaprofesional.html#formacion">Formación Académica</a></li>
                 </ul>
               </li>
             </ul>
@@ -69,8 +69,8 @@
                     <div class="skill medium" onclick="openModal('js')">JavaScript</div>
                     <div class="skill medium" onclick="openModal('python')">Python</div>
                     <div class="skill medium" onclick="openModal('github')">GitHub</div>
+                    <div class="skill medium" onclick="openModal('mysql')">MySQL</div>
                     <div class="skill low" onclick="openModal('php')">PHP</div>
-                    <div class="skill low" onclick="openModal('mysql')">MySQL</div>
                     <div class="skill low" onclick="openModal('powerplatform')">Power Platform</div>
                 </div>
             </div>
@@ -86,19 +86,18 @@
         </section>
         <section id="proyects">
             <h2>Mis Proyectos</h2>
-            <div class="tarjetas">  <a href="PagesHTML/" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/" alt="Proyecto de Auditorías" title="Auditorías">
-                    <div class="texto-proyecto">
-                        <h3>Gestión de Auditorías</h3>
-                        <p>Aplicación creada como proyecto final de formación para demostrar de lo que somos capaces yo y el equipo con el que lo he hecho.</p>
-                    </div>
-                </a>
+            <div class="tarjetas">
 
-                <a href="PagesHTML/" class="tarjetaproyecto">
+                <a href="PagesHTML/proyecto_AiraERP.html" class="tarjetaproyecto">
                     <img src="Images/Proyectos/" alt="Proyecto ERP Mantenimiento" title="ERP Mantenimiento">
                     <div class="texto-proyecto">
-                        <h3>ERP Mantenimiento</h3>
+                        <h3>Aira ERP</h3>
                         <p>Aplicación creada como proyecto final de formación para demostrar de lo que somos capaces de hacer todos los integrantes del equipo.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">Python</span>
+                        </div>
                     </div>
                 </a>
             
@@ -107,29 +106,48 @@
                     <div class="texto-proyecto">
                         <h3>KyanCosplay</h3>
                         <p>Creada a partir de crear una empresa en la formación de Marketing, creando la tienda online además de captar más clientes.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
                     </div>
                 </a>
             
-                <a href="PagesHTML/" class="tarjetaproyecto">
+                <a href="PagesHTML/proyecto_AltaEmpleados.html" class="tarjetaproyecto">
                     <img src="Images/Proyectos/AltaEmpleados.png" alt="Proyecto Alta Empleados" title="Alta Empleados">
                     <div class="texto-proyecto">
                         <h3>Alta Empleados</h3>
                         <p>Utilización de Power Automate para crear en grupo un proyecto simulando una gestión para administrar el reparto de portátiles.</p>
+                        <div class="lenguajes">
+                            <span class="chip">PowerPlatform</span>
+                        </div>
                     </div>
                 </a>
             
                 <a href="PagesHTML/proyecto_FairyPaws.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/FairyPaws.png" alt="Proyecto" title="">
+                    <img src="Images/Proyectos/FairyPaws.png" alt="Proyecto" title="FairyPaws">
                     <div class="texto-proyecto">
                         <h3>FairyPaws</h3>
                         <p>Página web creada para examen de formularios. En dicho examen se ha creado un formulario que se enlaza con una base de datos de MySQL.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                            <span class="chip">PHP</span>
+                        </div>
                     </div>
                 </a>
-                <a href="PagesHTML/" class="tarjetaproyecto">
-                    <img src="Images/Proyectos" alt="Proyecto" title="">
+                <a href="PagesHTML/proyecto_Vercon.html" class="tarjetaproyecto">
+                    <img src="Images/Proyectos/Vercon.png" alt="Proyecto" title="Vercon">
                     <div class="texto-proyecto">
-                        <h3>Gestor</h3>
-                        <p>Creado para solucionar problemas de encontrar una página que transforme distintos formatos ya sean de imágenes, PDF,...</p>
+                        <h3>Vercon</h3>
+                        <p>Creado para solucionar problemas de encontrar una página que transforme distintos formatos ya sean de imágenes, PDF...</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
                     </div>
                 </a>
                 <a href="PagesHTML/proyecto_kiyomi.html" class="tarjetaproyecto">
@@ -137,13 +155,23 @@
                     <div class="texto-proyecto">
                         <h3>Kiyomi</h3>
                         <p>Rediseño de una página web de un restaurante japonés ya que la original que tiene dicho restaurante me parecía demasiado simple.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
                     </div>
                 </a>
-                <a href="PagesHTML/" class="tarjetaproyecto">
+                <a href="PagesHTML/proyecto_YoruNeko.html" class="tarjetaproyecto">
                     <img src="Images/Proyectos/YoruNeko.png" alt="Proyecto YoruNeko" title="YoruNeko">
                     <div class="texto-proyecto">
                         <h3>YoruNeko</h3>
                         <p>Creación de una página web de un restaurante japonés ficticio debido a mi gusto por la cultura y gastronomía japonesa.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -152,12 +180,8 @@
         <section id="teamwork" class="valoraciones">
             <h2>Valoraciones</h2>
             <div class="carousel-container">
-                <button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>
-
+                <!--<button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>-->
                 <div class="carousel-track" id="carouselTrack">
-                    <div class="testimonio">
-                        <p>"Jordi siempre encuentra una solución lógica incluso en situaciones caóticas."</p> <h4>Ariadna L. | ERP Mantenimiento</h4>
-                    </div>
                     <div class="testimonio">
                         <p>"Tienes mucha iniciativa por enseñar a los que no saben."</p>
                         <h4>Paula A. | KyanCosplay</h4>
@@ -171,8 +195,7 @@
                         <p>"Jordi siempre encuentra una solución lógica incluso en situaciones caóticas."</p> <h4>Alhida L. | ERP Mantenimiento</h4>
                     </div>
                 </div>
-
-                <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
+                <!--<button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>-->
             </div>
         </section>
 

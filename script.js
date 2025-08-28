@@ -78,21 +78,21 @@ function openModal(skill) {
             description: 'Plataforma de control de versiones. Manejo de repositorios, branches, pull requests y colaboración en proyectos.',
             level: 'medium'
         },
-        php: {
-            title: 'PHP',
-            description: 'Conocimientos básicos, principalmente para mantenimiento y ajustes menores en proyectos existentes.',
-            level: 'low'
-        },
         mysql: {
             title: 'MySQL',
             description: 'Capacidad para ejecutar consultas simples y comprender estructuras de bases de datos relacionales.',
+            level: 'medium'
+        },
+        php: {
+            title: 'PHP',
+            description: 'Conocimientos básicos, principalmente para mantenimiento y ajustes menores en proyectos existentes.',
             level: 'low'
         },
         powerplatform: {
             title: 'Power Platform',
             description: 'Familiarizado con la creación básica de aplicaciones en Power Apps, flujos simples en Power Automate y uso inicial de Dataverse.',
             level: 'low'
-        }
+        },
     };
     
     const data = skillData[skill];
@@ -160,18 +160,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselContainer = document.querySelector('.carousel-container');
     carouselContainer.addEventListener('mouseenter', stopAutoScroll);
     carouselContainer.addEventListener('mouseleave', startAutoScroll);
-});
-
-// Animación de hover para la imagen del header
-document.addEventListener('DOMContentLoaded', () => {
-    const headerImg = document.querySelector('header img');
-    if (headerImg) {
-        headerImg.addEventListener('mouseenter', () => {
-            headerImg.style.transform = 'scale(1.05) rotate(2deg)';
-        });
-        
-        headerImg.addEventListener('mouseleave', () => {
-            headerImg.style.transform = 'scale(1) rotate(0deg)';
-        });
-    }
 });

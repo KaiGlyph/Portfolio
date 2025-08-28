@@ -3,11 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Proyecto FairyPaws | Jordi Gallardo</title>
-  <meta name="description" content="Portfolio de Jordi Gallardo. Programador Junior"> <!-- Añadir más descripción -->
+
+  <!-- SEO -->
+  <meta name="description" content="FairyPaws: proyecto web de inicio de sesión y donaciones ficticias, con estética y funcionalidad desarrolladas por Jordi Gallardo." />
+  <meta name="keywords" content="FairyPaws, Jordi Gallardo, inicio de sesión, donaciones, web educativa, UX, UI, portafolio, proyecto web" />
+  <meta name="author" content="Jordi Gallardo" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="FairyPaws — Proyecto Web de Donaciones y Login Ficticio" />
+  <meta property="og:description" content="FairyPaws es un proyecto web de inicio de sesión y donaciones ficticias, desarrollado para practicar funciones de login, modals y estética interactiva." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../Images/Pages/FairyPaws/FairyPaws.png" />
+  <meta property="og:url" content="https://kaiglyph.github.io/FairyPaws/" />
+
   <link rel="icon" href="../Images/Logos/Logo G KaiGlyph.png" type="image/svg"> 
-  <link rel="stylesheet" href="/PagesCSS/generalproyectos.css">
+  <link rel="stylesheet" href="../PagesCSS/generalproyectos.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="navname">
@@ -30,8 +44,8 @@
             <li class="submenu-parent">
               <a href="../index.html#about">Trayectorias</a>
               <ul class="submenu">
-                <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
-                <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+                <li><a href="/PagesHTML/trayectoriaprofesional.html#experiencia">Experiencia Laboral</a></li>
+                <li><a href="/PagesHTML/trayectoriaprofesional.html#formacion">Formación Académica</a></li>
               </ul>
             </li>
           </ul>
@@ -44,44 +58,44 @@
   </nav>
   
   <main>
-      <header>
-          <img src="../Images/Pages/FairyPaws/FairyPaws.png" alt="Apartado de donaciones de Fairy Paws" title="FairyPaws">
-          <div class="ExLaProyecto">
-              <h1>FairyPaws</h1>
-              <h3>
-                  Fairy Paws surge de la tarea que tenía para hacer un inicio de sesión el cual, si no estás iniciado, te restringe algún campo. En este caso, está hecho para que inicies
-                  sesión o no podrás hacer una donación a los pandas rojos (todo de forma ficticia). <br><br>
-                  Para añadir un poco más de <span>complejidad, estética y funcionalidad</span>, decidí hacer *modals* para el inicio y el registro de sesión, de forma que no te mande a otra página para luego tener que volver. <br><br>
-                  Como tenía tiempo para probar cosas nuevas, decidí añadir unas partículas en la pasarela de pago, de forma que diera una estética de cerezo en flor. <br><br>
-                  Para finalizar, ya que el inicio de sesión era sencillo porque no podía poner más campos (ya que era una base de datos para el examen), añadí condiciones para tener una contraseña más segura. <br><br>
-                  Y con todo esto me quedo conforme con el resultado en el tiempo que tuve para crearlo, que fueron <span>unas dos semanas o menos</span>, ya que ayudaba a los compañeros de clase con problemas que tenían.
-              </h3>
-          </div>
-      </header>
-      <!-- Instalación / Uso -->
-      <section class="instalacion">
-          <h2>Instalación y ejecución local</h2>
-          <p>
-            Esta página es más compleja de abrir y observar el proceso de inicio de sesión, ya que se necesita MySQL, además de que se utilizan archivos <code>.php</code>. Esto impide abrir la página directamente desde GitHub, como normalmente lo hago.
-          </p>
-          <p>
-            Por lo tanto, se deben seguir los siguientes pasos para ejecutarla correctamente de forma local:
-          </p>
+    <header>
+        <img src="../Images/Pages/FairyPaws/FairyPaws.png" alt="Apartado de donaciones de Fairy Paws" title="FairyPaws">
+        <div class="ExLaProyecto">
+            <h1>FairyPaws</h1>
+            <h3>
+                Fairy Paws surge de la tarea que tenía para hacer un inicio de sesión el cual, si no estás iniciado, te restringe algún campo. En este caso, está hecho para que inicies
+                sesión o no podrás hacer una donación a los pandas rojos (todo de forma ficticia). <br><br>
+                Para añadir un poco más de <span>complejidad, estética y funcionalidad</span>, decidí hacer *modals* para el inicio y el registro de sesión, de forma que no te mande a otra página para luego tener que volver. <br><br>
+                Como tenía tiempo para probar cosas nuevas, decidí añadir unas partículas en la pasarela de pago, de forma que diera una estética de cerezo en flor. <br><br>
+                Para finalizar, ya que el inicio de sesión era sencillo porque no podía poner más campos (ya que era una base de datos para el examen), añadí condiciones para tener una contraseña más segura. <br><br>
+                Y con todo esto me quedo conforme con el resultado en el tiempo que tuve para crearlo, que fueron <span>unas dos semanas o menos</span>, ya que ayudaba a los compañeros de clase con problemas que tenían.
+            </h3>
+        </div>
+    </header>
+    <!-- Instalación / Uso -->
+    <section class="instalacion">
+        <h2>Instalación y ejecución local</h2>
+        <p>
+          Esta página es más compleja de abrir y observar el proceso de inicio de sesión, ya que se necesita MySQL, además de que se utilizan archivos <code>.php</code>. Esto impide abrir la página directamente desde GitHub, como normalmente lo hago.
+        </p>
+        <p>
+          Por lo tanto, se deben seguir los siguientes pasos para ejecutarla correctamente de forma local:
+        </p>
 
-          <ol class="pasos">
-            <li>Descargar e instalar <strong>XAMPP</strong>.</li>
-            <li>Abrir la ruta: <code>C:\xampp\htdocs\</code></li>
-            <li>Copiar dentro esa carpeta el proyecto deseado (en mi caso: <code>PaginasWebs\FairyPaws</code>).</li>
-            <li>Ejecutar XAMPP y encender <strong>Apache</strong> y <strong>MySQL</strong>.</li>
-            <li>Abrir la base de datos (opcional) para ver los datos disponibles.</li>
-            <li>Abrir un navegador y escribir: <code>http://localhost/PaginasWebs/FairyPaws/</code></li>
-            <li>¡Listo! Ya puedes probar el inicio de sesión.</li>
-          </ol>
+        <ol class="pasos">
+          <li>Descargar e instalar <strong>XAMPP</strong>.</li>
+          <li>Abrir la ruta: <code>C:\xampp\htdocs\</code></li>
+          <li>Copiar dentro esa carpeta el proyecto deseado (en mi caso: <code>PaginasWebs\FairyPaws</code>).</li>
+          <li>Ejecutar XAMPP y encender <strong>Apache</strong> y <strong>MySQL</strong>.</li>
+          <li>Abrir la base de datos (opcional) para ver los datos disponibles.</li>
+          <li>Abrir un navegador y escribir: <code>http://localhost/PaginasWebs/FairyPaws/</code></li>
+          <li>¡Listo! Ya puedes probar el inicio de sesión.</li>
+        </ol>
 
-          <div class="boton-descarga">
-              <a href="../DownloadsPages/Fiery-Paws.rar" download class="btn-download">Descargar Proyecto FairyPaws</a>
-          </div>
-      </section>
+        <div class="boton-descarga">
+            <a href="../Downloads/Fiery-Paws.rar" download class="btn-download">Descargar Proyecto FairyPaws</a>
+        </div>
+    </section>
   </main>
 
   <footer>

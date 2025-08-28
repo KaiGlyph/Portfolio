@@ -3,11 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Proyecto Kiyomi | Jordi Gallardo</title>
-  <meta name=”description” content="Portfolio de Jordi Gallardo. Programador Junior"> <!--Añadir mas descripción-->
+
+  <!-- SEO -->
+  <meta name="description" content="Kiyomi: proyecto web de pedidos de restaurante japonés, mejorando accesibilidad, estética y experiencia de usuario. Portfolio de Jordi Gallardo." />
+  <meta name="keywords" content="Kiyomi, Jordi Gallardo, web de pedidos, restaurante japonés, UX, UI, proyecto web, portafolio" />
+  <meta name="author" content="Jordi Gallardo" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Kiyomi — Web de Pedidos de Restaurante Japonés" />
+  <meta property="og:description" content="Kiyomi es un proyecto web para mejorar la experiencia de pedidos online de un restaurante japonés, destacando accesibilidad, estética y usabilidad." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../Images/Proyectos/Kiyomi.png" />
+  <meta property="og:url" content="https://kaiglyph.github.io/Kiyomi/" />
+
   <link rel="icon" href="../Images/Logos/Logo G KaiGlyph.png" type="image/svg"> 
-  <link rel="stylesheet" href="/PagesCSS/generalproyectos.css">
+  <link rel="stylesheet" href="../PagesCSS/generalproyectos.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="navname">
@@ -30,8 +44,8 @@
             <li class="submenu-parent">
               <a href="../index.html#about">Trayectorias</a>
               <ul class="submenu">
-                <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
-                <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+                <li><a href="/PagesHTML/trayectoriaprofesional.html#experiencia">Experiencia Laboral</a></li>
+                <li><a href="/PagesHTML/trayectoriaprofesional.html#formacion">Formación Académica</a></li>
               </ul>
             </li>
           </ul>
@@ -44,20 +58,35 @@
   </nav>
   
   <main>
-      <header>
-          <img src="" alt="">
-          <div class="ExLaProyecto">
-              <h1>TituloProyecto</h1>
-              <h3>Explicación mas extensa de como idee el proyecto</h3>
-          </div>
-      </header>
-      <!--Instalación / Uso-->
-      <section class="instalacion">
-          <div class="">
-              <h2>Instalación y visualización de la pagina</h2>
-              <p>Explicar como se desarrolla abre la pagina.</p>
-          </div>
-      </section>
+    <header>
+        <img src="../Images/Proyectos/Kiyomi.png" alt="Página del proyecto Kiyomi" title="Kiyomi">
+        <div class="ExLaProyecto">
+            <h1>Kiyomi</h1>
+            <h3>
+                El proyecto <span>Kiyomi</span> surgió después de ir a un restaurante japonés donde la página web para pedir y consultar los platos era demasiado simple y poco atractiva. <br><br>
+                Decidí mejorarla para que fuera <span>más accesible, estética y sencilla de navegar</span>, ofreciendo una experiencia más clara para el usuario. <br><br>
+                Con este proyecto buscaba demostrar cómo una web de pedidos puede ser intuitiva y agradable, sin perder funcionalidad. 
+            </h3>
+        </div>
+    </header>
+
+    <!--Instalación / Uso-->
+    <section class="instalacion">
+        <div>
+            <h2>Instalación y visualización de la página</h2>
+            <p>
+                Esta página no requiere instalación previa. Puedes visualizarla directamente desde tu navegador accediendo al siguiente enlace:
+            </p>
+            <a href="https://kaiglyph.github.io/Kiyomi/" target="_blank" class="btn-project">Abrir Kiyomi</a>
+            <p>
+                Para poder utilizar todas las funcionalidades, como la cesta de la compra, es necesario iniciar sesión. 
+                La página incluye un sistema de autenticación básico para efectos de demostración: <br><br>
+                <strong>Credenciales de prueba:</strong><br>
+                📧 <code>user@example.com</code><br>
+                🔑 <code>123456</code>
+            </p>
+        </div>
+    </section>
   </main>
 
   <footer>
