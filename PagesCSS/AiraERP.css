@@ -1,0 +1,267 @@
+/* ===============================
+   Sección: Introducción Aira ERP
+   =============================== */
+header .ExLaProyecto {
+    text-align: left;
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+}
+
+header .ExLaProyecto h1 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+header .ExLaProyecto h3 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+}
+
+/* ===============================
+   Funcionalidades Destacadas
+   =============================== */
+.funcionalidades-aira {
+    padding: 3rem 6%;
+    background-color: var(--color-background);
+}
+
+.funcionalidades-aira h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.6%;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+.funcionalidades-aira p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+    max-width: 850px;
+    margin-bottom: 2rem;
+}
+
+.imagenes-aira {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.imagen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 250px;
+}
+
+.imagen-item.multiple img {
+    margin-bottom: 0.5rem;
+}
+
+.imagen-item img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(65, 37, 117, 0.6);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(170, 130, 250, 0.9);
+}
+
+.titulo-img {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.descripcion-img {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    text-align: center;
+    line-height: 1.4; /* más compacto */
+}
+
+/* ===============================
+   PDF Aira ERP (si los agregas)
+   =============================== */
+.pdf-aira {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pdf-aira h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.pdf-aira p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+.pdf-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pdf-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pdf-item p {
+    font-size: 1rem;
+    color: var(--color-text-hover);
+}
+
+/* Contenedor overlay para PDFs */
+#pdf-viewer-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 31, 42, 0.95);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#pdf-viewer-frame {
+    width: 90%;
+    max-width: 900px;
+    height: 80%;
+    border: 3px solid var(--color-primary);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(170, 130, 250, 0.6);
+    cursor: auto;
+}
+
+#pdf-viewer-frame:focus {
+    outline: none;
+}
+
+.btn-pdf {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    box-shadow: 0 0 18px rgba(170, 130, 250, 0.9);
+    transform: scale(1.05);
+}
+
+/* ===============================
+   Lightbox para imágenes
+   =============================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(170, 130, 250, 0.9);
+}
+
+/* ===============================
+   Página Web del Proyecto
+   =============================== */
+.pagina-web {
+    padding: 6.6% 6%;
+    background-color: var(--color-background);
+}
+
+.pagina-web h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.6%;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+}
+
+.pagina-web p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+    max-width: 850px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.btn-project {
+    display: inline-block;
+    margin-left: 0;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    box-shadow: 0 0 18px rgba(170, 130, 250, 0.9);
+    transform: scale(1.05);
+}

@@ -1,0 +1,274 @@
+header {
+    font-size: 2.3rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-navbackground);
+    padding:6rem 0;
+}
+
+main.trayectoria {
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Unageo', sans-serif;
+}
+
+.intro-trayectoria {
+  margin-bottom: 3rem;
+  background-color: inherit;
+}
+
+.intro-trayectoria h1 {
+  font-family: 'Kenyan', sans-serif;
+  font-size: 266%;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-weight: normal;
+}
+
+/* Etapas */
+.etapa {
+  background-color: transparent;
+  padding: 0 0 3rem 0;
+  margin-bottom: 2rem;
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.etapa:hover {
+  box-shadow: none;
+}
+
+.etapa-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.etapa-header img {
+  height: 66px;
+  max-width: 200px;
+  min-width: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 12px rgba(170, 130, 250, 0.3);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.etapa-header img:hover {
+  box-shadow: 0 0 20px rgba(170, 130, 250, 0.6);
+  background-color: rgba(255, 255, 255, 1); /* Fondo más sólido al pasar el ratón */
+}
+
+
+.etapa-header h2 {
+  font-family: 'Kenyan', sans-serif;
+  font-size: 2.8rem;
+  margin: 0;
+  color: var(--color-text-hover);
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.etapa p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: var(--color-text);
+}
+
+/* Botón titulación */
+.btn-cv {
+  display: inline-block;
+  margin: 1.5rem 0rem;
+  padding: 0.8rem 1.6rem;
+  background-color: transparent;
+  color: var(--color-text-hover);
+  font-family: 'Kenyan', sans-serif;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-text-hover);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(170, 130, 250, 0.15);
+  cursor: pointer;
+}
+
+.btn-cv:hover {
+  background-color: var(--color-text-hover);
+  color: var(--color-background);
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(170, 130, 250, 0.6);
+}
+
+/* Secciones de vídeo */
+.video-seccion {
+  background-color: rgba(17, 17, 17, 0.85);
+  padding: 1.4rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 15px rgba(65, 37, 117, 0.4);
+}
+
+.video-seccion h3 {
+  font-family: 'Kenyan', sans-serif;
+  font-size: 2.3rem;
+  margin: 1rem 0;
+  color: var(--color-text-hover);
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.video-seccion p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 2rem 0 3rem 0;
+  color: var(--color-text);
+}
+
+.video-seccion iframe{
+  width: 100%;
+  height: 76vh;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(170, 130, 250, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.video-seccion iframe:hover {
+  box-shadow: 0 0 20px rgba(170, 130, 250, 0.6);
+}
+
+.bloque-trabajo,
+.bloque-estudios {
+  padding: 2rem 0 3rem 0;
+  margin-bottom: 3rem;
+  border-top: 3px solid rgba(170, 130, 250, 0.2);
+}
+
+.bloque-titulo {
+  font-family: 'Kenyan', sans-serif;
+  font-size: 2.6rem;
+  color: var(--color-text-hover);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 6px solid var(--color-text-hover);
+  padding-left: 1rem;
+}
+
+
+/* Modal fondo */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 20, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor del PDF */
+.pdf-content {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  height: 80%;
+  background: #181f2a;
+  border: 2px solid var(--color-text-hover);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(170, 130, 250, 0.6);
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+}
+
+/* PDF embebido */
+.pdf-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Imagen dentro del modal */
+.pdf-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* que se vea completa */
+  border-radius: 8px;
+  display: block;
+}
+
+/* Botón de cierre */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;            
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;        
+  background-color: var(--color-text-hover);
+  border-radius: 50%;       
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2100;
+  box-shadow: 0 0 10px rgba(170, 130, 250, 0.5);
+}
+
+.close-btn:hover {
+  background-color: #fff;
+  color: var(--color-text-hover);
+  box-shadow: 0 0 14px rgba(170, 130, 250, 0.8);
+}
+
+
+/* Animación */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+  main.trayectoria { padding: 0 3rem; }
+}
+
+@media (max-width: 768px) {
+  main.trayectoria { padding: 0 2rem; }
+  .intro-trayectoria h1 { font-size: 200%; }
+  .etapa-header h2 { font-size: 2.2rem; text-align: center; }
+  .etapa p { font-size: 1.15rem; }
+  .video-seccion h3 { font-size: 1.9rem; text-align: center; }
+  .video-seccion p { font-size: 1.1rem; }
+  .bloque-titulo {
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-top: 3px solid var(--color-text-hover);
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main.trayectoria { padding: 0 1.2rem; }
+  header { padding: 4rem 0; }
+  .btn-cv { font-size: 1.2rem; padding: 0.6rem 1.2rem; }
+  .video-seccion iframe { height: 220px; }
+}
