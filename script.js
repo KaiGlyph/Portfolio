@@ -91,7 +91,7 @@ function openModal(skill) {
         powerplatform: {
             title: 'Power Platform',
             description: 'Familiarizado con la creación básica de aplicaciones en Power Apps, flujos simples en Power Automate y uso inicial de Dataverse.',
-            level: 'low'
+            level: 'medium'
         },
     };
     
