@@ -1,0 +1,342 @@
+:root {
+  /* — Colores base — */
+  --color-navbackground: #0a0a0a;
+  --color-background: #0f0f0f;
+  --color-text: #ececec;
+  --color-text-hover: #aa82fa;
+  --color-primary: #412575;
+
+  --color-submenu-background: #1a1a1a;
+  --color-submenu-hover: #673fb3;
+  --color-shadow-nav: rgba(65, 37, 117, 0.6);
+
+  /* — Nuevas variables para cohesión y modernidad — */
+  --color-card-bg: #161616;
+  --color-header-bg: var(--color-card-bg); /* ← ¡igual que tarjetas! */
+  --color-card-border: #252525;
+  --color-card-border-hover: #3a354a;
+  --color-card-glow: rgba(107, 61, 180, 0.3);
+  --color-accent-glow: rgba(170, 130, 250, 0.25);
+  --color-subtle: #6a6a6a;
+  --color-muted: #888;
+
+  /* — Utilidades — */
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --shadow-low: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-mid: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ——— Header (igual fondo que tarjetas) ——— */
+.cert-header {
+  padding: 8rem 0 4rem;
+  background: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cert-header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-header h1 {
+  font-family: 'Kenyan', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.cert-header .cert-subtitle {
+  font-family: 'Unageo', sans-serif;
+  font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  color: var(--color-subtle);
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ——— Grid de Certificados ——— */
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+
+.cert-card {
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-low);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  border: 1px solid var(--color-card-border);
+  isolation: isolate;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-primary);
+  transition: background var(--transition-fast), height 0.3s ease;
+}
+
+.cert-card:hover::before {
+  height: 6px;
+  background: var(--color-text-hover);
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-mid), 0 0 20px var(--color-card-glow);
+  border-color: var(--color-card-border-hover);
+}
+
+.cert-card h3 {
+  font-family: 'Unageo', sans-serif;
+  font-weight: 600;
+  font-size: 1.45rem;
+  margin: 1.6rem 1.2rem 0.6rem;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.cert-card .cert-field {
+  font-weight: 400;
+  color: var(--color-text);
+  font-size: 1.1em;
+  display: block;
+}
+
+.cert-card .institution {
+  font-family: 'Unageo', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-subtle);
+  margin: 0 1.2rem 0.2rem;
+  line-height: 1.5;
+}
+
+.cert-card .year {
+  font-family: 'Unageo', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0 1.2rem 1.4rem;
+}
+
+.btn-ver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 2.4rem);
+  margin: 0 1.2rem 1.6rem;
+  padding: 0.8rem 0;
+  background: transparent;
+  color: var(--color-text-hover);
+  border: 1.5px solid var(--color-text-hover);
+  border-radius: var(--border-radius-md);
+  font-family: 'Unageo', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-align: center;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 0 0 var(--color-accent-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ver::after {
+  content: "→";
+  margin-left: 0.6em;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover .btn-ver {
+  background: var(--color-text-hover);
+  color: var(--color-background);
+  box-shadow: 0 0 0 4px var(--color-accent-glow);
+}
+
+.cert-card:hover .btn-ver::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cert-card:active {
+  transform: translateY(-6px) scale(0.99);
+  transition: transform 0.15s ease;
+}
+
+/* Modal fondo */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 20, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor del PDF */
+.pdf-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  height: 80%;
+  background: #181f2a;
+  border: 2px solid var(--color-text-hover);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(170, 130, 250, 0.6);
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+}
+
+/* PDF embebido */
+.pdf-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Imagen dentro del modal */
+.pdf-content img {
+  max-width: 95%;
+  max-height: 90%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: auto;
+  background: var(--color-background);
+  border-radius: 8px;
+}
+
+/* Botón de cierre */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;            
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;        
+  background-color: var(--color-text-hover);
+  border-radius: 50%;       
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2100;
+  box-shadow: 0 0 10px rgba(170, 130, 250, 0.5);
+}
+
+.close-btn:hover {
+  background-color: #fff;
+  color: var(--color-text-hover);
+  box-shadow: 0 0 14px rgba(170, 130, 250, 0.8);
+}
+
+
+/* Animación */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 768px) {
+  .cert-header {
+    padding: 5rem 0 3rem;
+  }
+
+  .cert-header h1 {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .certificados-grid {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .cert-card h3 {
+    font-size: 1.35rem;
+    margin-top: 1.4rem;
+  }
+
+  .btn-ver {
+    font-size: 1rem;
+  }
+
+  .pdf-content {
+    width: 95%;
+    height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-header {
+    padding: 4rem 0 2.5rem;
+  }
+
+  .cert-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .cert-header .cert-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .certificados-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}

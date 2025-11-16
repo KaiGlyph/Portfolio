@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados | Jordi Gallardo</title>
+  
+  <meta name="description" content="Certificados académicos y profesionales de Jordi Gallardo: ARI, Instalaciones Eléctricas, Power Platform, etc.">
+  <meta name="keywords" content="certificados, formación, titulaciones, Jordi Gallardo, programador, automatización">
+  <meta name="author" content="Jordi Gallardo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Certificados de Jordi Gallardo">
+  <meta property="og:description" content="Colección de certificados académicos y profesionales verificados.">
+  <meta property="og:image" content="../Images/Trayectoria/Logo-JordiGallardo.png">
+  <meta property="og:url" content="https://tuweb.com/PagesHTML/certificados.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="../Images/Logos/Logo G KaiGlyph.png" type="image/svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../PagesCSS/certificados.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navname">
+      <a href="../index.html">
+        <img src="../Images/Logos/Logo G KaiGlyph.png" alt="Jordi Gallardo">
+        <h2>Jordi Gallardo</h2>
+      </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navmenu">
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">Sobre Mí</a></li>
+        <li><a href="../index.html#proyects">Proyectos</a></li>
+        <li><a href="../index.html#teamwork">Valoraciones</a></li>
+        <li><a href="../index.html#contact">Contáctame</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="certificados-page">
+    <header class="cert-header">
+    <div class="cert-header-content">
+        <h1>Mis Certificados</h1>
+        <p class="cert-subtitle">Formación verificada y acreditada — desde automatización industrial hasta desarrollo web.</p>
+    </div>
+    </header>
+
+    <section class="certificados-grid">
+      <!-- Certificado 1 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_ARI.pdf','pdf')">
+        <h3>Ciclo Superior<br><span class="cert-field">Automatismos y Robótica Industrial</span></h3>
+        <p class="institution">Institut Escola del Treball</p>
+        <p class="year">2021 – 2023</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 2 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificat_Instalaciones_Electricas_y_Automaticas.pdf','pdf')">
+        <h3>Ciclo Medio<br><span class="cert-field">Instalaciones Eléctricas y Automáticas</span></h3>
+        <p class="institution">Institut Escola del Treball</p>
+        <p class="year">2019 – 2021</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 3 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_ESO.jpeg','image')">
+        <h3>ESO<br><span class="cert-field">Educación Secundaria Obligatoria</span></h3>
+        <p class="institution">Institut Martí Dot</p>
+        <p class="year">2015 – 2019</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 4 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_Wordpress.pdf','pdf')">
+        <h3>Introduction to WordPress <br><br></h3> 
+        <p class="institution">Simplilearn</p>
+        <p class="year">2025</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 5 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_PowerAutomate_Automaticación.png','image')">
+        <h3>Power Automate</h3> 
+        <p class="institution">Microsoft Learns</p>
+        <p class="year">2025</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 6 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_PowerBI_DashboardInaDay.png','image')">
+        <h3>Power BI</h3> 
+        <p class="institution">Microsoft Learns</p>
+        <p class="year">2025</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+
+      <!-- Certificado 7 -->
+      <div class="cert-card" onclick="openMedia('../Documents/Certificates/Certificado_Intervención_Incendios.pdf','pdf')">
+        <h3>Extinción de Incendios: Primera Intervención</h3>
+        <p class="institution">ASPY</p>
+        <p class="year">2024</p>
+        <button class="btn-ver">Ver Certificado</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="pdfModal" class="pdf-modal">
+    <div class="pdf-content">
+      <span class="close-btn" onclick="closePDF()">&times;</span>
+      <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+      <img id="imgFrame" src="" alt="Certificado" style="display:none; max-width:100%; max-height:90vh; margin:auto;">
+    </div>
+  </div>
+
+  <footer>
+        <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+        <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
+        <div class="footer-social">
+            <a href="https://github.com/KaiGlyph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.22c-3.338.724-4.033-1.415-4.033-1.415-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.304.76-1.604-2.665-.304-5.466-1.33-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.625-5.475 5.922.43.37.823 1.103.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            </a>
+            <a href="https://linkedin.com/in/jordi-gallardo-sanchez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20.447 20.452H16.9v-5.569c0-1.328-.027-3.038-1.852-3.038-1.853 0-2.136 1.447-2.136 2.941v5.666H9.325V9h3.397v1.561h.047c.473-.9 1.633-1.852 3.363-1.852 3.594 0 4.256 2.366 4.256 5.444v6.299zM5.337 7.433c-1.09 0-1.973-.882-1.973-1.973 0-1.09.883-1.973 1.973-1.973 1.09 0 1.973.883 1.973 1.973 0 1.09-.883 1.973-1.973 1.973zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.555C0 23.23.792 24 1.771 24h20.451c.98 0 1.778-.77 1.778-1.722V1.722C24 .77 23.204 0 22.225 0z"/>
+            </svg>
+            </a>
+            <a href="mailto:jordigallardo0621@gmail.com" aria-label="Email" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            </a>
+        </div>
+    </footer>
+
+  <script src="../script.js"></script>
+  <script src="../PagesJS/certificados.js"></script>
+</body>
+</html>
