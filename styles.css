@@ -1013,19 +1013,28 @@ footer a:hover {
 
     #about {
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 6%; /* Alineado con el padding global */
         align-items: flex-start;
     }
 
     .aboutme {
         max-width: 100%;
+        margin-bottom: 2rem;
     }
 
     .skills {
-        margin-left: 0;
-        margin-top: 2rem;
+        width: 100%;
+        margin: 0;
+        padding: 0 16% 0 0%;
+        box-sizing: border-box;
     }
 
+    .panel-idiomas,
+    .panel-habilidades {
+        width: 100%;
+    }
+
+    /* Botones en bloque */
     .btn-trayectoria,
     .btn-cv {
         display: block;
