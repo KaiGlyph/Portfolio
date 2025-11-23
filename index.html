@@ -63,16 +63,35 @@
                 <a href="PagesHTML/certificados.html" class="btn-cv">Ver Certificados</a>
             </div>
             <div class="skills">
-                <div class="skills-grid">
-                    <div class="skill high" onclick="openModal('html')">HTML</div>
-                    <div class="skill high" onclick="openModal('css')">CSS</div>
-                    <div class="skill high" onclick="openModal('jira')">Jira</div>
-                    <div class="skill medium" onclick="openModal('js')">JavaScript</div>
-                    <div class="skill medium" onclick="openModal('python')">Python</div>
-                    <div class="skill medium" onclick="openModal('github')">GitHub</div>
-                    <div class="skill medium" onclick="openModal('mysql')">MySQL</div>
-                    <div class="skill medium" onclick="openModal('powerplatform')">Power Platform</div>
-                    <div class="skill low" onclick="openModal('php')">PHP</div>
+                <!-- Idiomas (ya moderno) -->
+                <div class="panel-idiomas">
+                    <h3>Idiomas</h3>
+                    <ul class="lista-idiomas">
+                        <li><span class="idioma-nombre">Español (Castellano)</span><span class="idioma-nivel">Nativo</span></li>
+                        <li><span class="idioma-nombre">Catalán</span><span class="idioma-nivel">Nativo</span></li>
+                        <li><span class="idioma-nombre">Inglés</span><span class="idioma-nivel">B1</span></li>
+                        <li><span class="idioma-nombre">Italiano</span><span class="idioma-nivel">Básico</span></li>
+                        <li><span class="idioma-nombre">Japonés</span><span class="idioma-nivel">Básico</span></li>
+                    </ul>
+                </div>
+
+                <!-- Separador visual sutil -->
+                <div class="panel-separator"></div>
+
+                <!-- Habilidades (nuevo título + diseño coherente) -->
+                <div class="panel-habilidades">
+                    <h3>Habilidades</h3>
+                    <div class="skills-grid">
+                        <div class="skill high" onclick="openModal('html')">HTML</div>
+                        <div class="skill high" onclick="openModal('css')">CSS</div>
+                        <div class="skill high" onclick="openModal('jira')">Jira</div>
+                        <div class="skill medium" onclick="openModal('js')">JavaScript</div>
+                        <div class="skill medium" onclick="openModal('python')">Python</div>
+                        <div class="skill medium" onclick="openModal('github')">GitHub</div>
+                        <div class="skill medium" onclick="openModal('mysql')">MySQL</div>
+                        <div class="skill medium" onclick="openModal('powerplatform')">Power Platform</div>
+                        <div class="skill low" onclick="openModal('php')">PHP</div>
+                    </div>
                 </div>
             </div>
 
@@ -88,6 +107,18 @@
         <section id="proyects">
             <h2>Mis Proyectos</h2>
             <div class="tarjetas">
+
+                <a href="PagesHTML/proyecto_GestorAuditorias.html" class="tarjetaproyecto">
+                    <img src="Images/Proyectos/GestiónAuditorias.png" alt="Proyecto de Gestión de Auditorías" title="Gestión de Auditorías">
+                    <div class="texto-proyecto">
+                        <h3>Gestión de Auditorías</h3>
+                        <p>Aplicación para gestionar auditorías internas con roles, flujos automatizados, generación de informes en tiempo real y mucho mas.</p>
+                        <div class="lenguajes">
+                            <span class="chip">Power Apps</span>
+                            <span class="chip">Power Automate</span>
+                        </div>
+                    </div>
+                </a>
 
                 <a href="PagesHTML/proyecto_AiraERP.html" class="tarjetaproyecto">
                     <img src="Images/Proyectos/AiraERP.png" alt="Proyecto Aira ERP" title="Aira ERP">
@@ -121,7 +152,7 @@
                         <h3>Alta Empleados</h3>
                         <p>Utilización de Power Automate para crear en grupo un proyecto simulando una gestión para administrar el reparto de portátiles.</p>
                         <div class="lenguajes">
-                            <span class="chip">PowerPlatform</span>
+                            <span class="chip">Power Automate</span>
                         </div>
                     </div>
                 </a>

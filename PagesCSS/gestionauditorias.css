@@ -1,0 +1,343 @@
+/* ===============================
+   Sección: Introducción — Header con layout horizontal
+   =============================== */
+header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 6%;
+    background-color: var(--color-navbackground);
+    margin-bottom: 3rem;
+}
+
+header img {
+    width: 46rem;
+    max-width: 45%;
+    border-radius: 8px;
+    margin-left: 6rem;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.02);
+}
+
+.ExLaProyecto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.ExLaProyecto h1 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+.ExLaProyecto h3 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 4%;
+    }
+
+    header img {
+        max-width: 80%;
+    }
+
+    .ExLaProyecto {
+        max-width: 100%;
+    }
+
+    .ExLaProyecto h1 {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+}
+
+/* ===============================
+   Cómo Funciona (Flujos)
+   =============================== */
+.como-funciona {
+    padding: 3rem 6%;
+    background-color: var(--color-background);
+    
+}
+
+.como-funciona h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    border-left: 6px solid var(--color-primary);
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+.como-funciona p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+    max-width: 850px;
+    margin-left: calc(6px + 1rem);
+    margin-right: auto;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.flujos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.flujo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 250px;
+    text-align: center;
+}
+
+.numero {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(65, 37, 117, 0.15);
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 12px rgba(65, 37, 117, 0.6);
+    transition: all 0.3s ease;
+}
+
+.flujo-item:hover .numero {
+    background-color: rgba(170, 130, 250, 0.2);
+    color: var(--color-text-hover);
+    border-color: var(--color-text-hover);
+    box-shadow: 0 0 18px rgba(170, 130, 250, 0.9);
+    transform: scale(1.08);
+}
+
+.flujo-item h4,
+.flujo-item p {
+    margin: 0;
+    width: 100%;
+}
+
+.flujo-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700; /* negrita fuerte */
+    color: var(--color-text); /* blanco/claro, no púrpura */
+    line-height: 1.4;
+}
+
+.flujo-item p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+/* ===============================
+   Automatización y Valor Añadido — Alineación de títulos
+   =============================== */
+
+.automatizacion h2,
+.valor-anadido h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.6%;
+    margin-left: calc(6px + 1rem);
+    display: inline-block;
+}
+
+/* Mantenemos los estilos de contenido */
+.automatizacion,
+.valor-anadido {
+    padding: 3rem 6%;
+    background-color: var(--color-background);
+}
+
+.automatizacion h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2.5rem 0 1rem;
+    margin-left: calc(6px + 1rem);
+    display: inline-block;
+}
+
+.automatizacion p,
+.valor-anadido p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    opacity: 0.95;
+    max-width: 850px;
+    margin: 0 auto 1.5rem auto;
+    margin-left: calc(6px + 1rem);
+    margin-right: auto;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.automatizaciones,
+.ventajas {
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+    padding-left: 2rem;
+    margin-left: calc(6px + 1rem);
+    margin-right: auto;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.automatizaciones li,
+.ventajas li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+    padding-left: 1.4rem;
+    position: relative;
+    
+}
+
+.automatizaciones li::before,
+.ventajas li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--color-text-hover);
+    font-weight: bold;
+    opacity: 0.8;
+    
+}
+
+.ventajas li::before {
+    content: '✔';
+}
+
+/* ===============================
+   Vídeo
+   =============================== */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(65, 37, 117, 0.6);
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+/* ===============================
+   Botones
+   =============================== */
+.btn-project,
+.btn-download {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(170, 130, 250, 0.6);
+    transition: all 0.3s ease;
+    margin-left: 0;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-project:hover,
+.btn-download:hover {
+    background-color: var(--color-text-hover);
+    color: var(--color-background);
+    box-shadow: 0 0 18px rgba(170, 130, 250, 0.9);
+    transform: scale(1.05);
+}
+
+/* ===============================
+   Responsive fino
+   =============================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    header img {
+        max-width: 80%;
+    }
+
+    /* Ajuste: en móvil, los títulos sin border-left pueden centrarse o alinearse a la izquierda */
+    .automatizacion h2,
+    .valor-anadido h2,
+    .automatizacion h3 {
+        margin-left: 0;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .video-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .numero {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .flujo-item h4 {
+        font-size: 1rem;
+    }
+
+    .video-container iframe {
+        height: 220px;
+    }
+}

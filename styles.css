@@ -280,6 +280,103 @@ header img{
     box-shadow: 0 0 16px rgba(170, 130, 250, 0.6);
 }
 
+/* --- Panel Dual: Idiomas + Habilidades (versión limpia sin borde lateral) --- */
+
+.panel-idiomas,
+.panel-habilidades {
+    padding: 1.4rem;
+    background: #141414;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(65, 37, 117, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.2rem;
+}
+
+.panel-idiomas:hover,
+.panel-habilidades:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(170, 130, 250, 0.2);
+}
+
+/* Títulos de panel */
+.panel-idiomas h3,
+.panel-habilidades h3 {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-text-hover); /* Violeta neón para ambos títulos */
+}
+
+/* Iconos de panel */
+.panel-icon {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Separador sutil entre paneles */
+.panel-separator {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(170, 130, 250, 0.2), transparent);
+    margin: 1.2rem 0;
+}
+
+/* Lista de idiomas */
+.lista-idiomas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+    font-family: 'Unageo', sans-serif;
+    font-size: 1.05rem;
+}
+
+.lista-idiomas li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.lista-idiomas li:last-child {
+    border-bottom: none;
+}
+
+.lista-idiomas li:hover {
+    background: rgba(170, 130, 250, 0.05);
+    transform: translateX(4px);
+    padding-left: 0.8rem;
+}
+
+.idioma-nombre {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.idioma-nivel {
+    font-size: 0.95rem;
+    color: var(--color-text-hover);
+    background: rgba(170, 130, 250, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.idioma-nivel:hover {
+    background: rgba(170, 130, 250, 0.25);
+    transform: scale(1.05);
+}
+
+.skills-grid {
+    margin-top: 0.6rem;
+}
+
 .skills {
     margin-top: 3%;
     margin-right: 6%;
@@ -316,7 +413,6 @@ header img{
 
 .skill {
     text-align: center;
-    margin: 5%;
     padding: 0.6rem 0.8rem;
     border-radius: 20px;
     font-weight: bold;
@@ -328,6 +424,13 @@ header img{
     user-select: none;
     animation: pulse 3s infinite ease-in-out;
     cursor: pointer;
+    min-height: 3,6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2; /* Evita que el texto se corte o se desborde */
+    overflow: hidden;
+    white-space: normal; /* Permite que el texto se ajuste en varias líneas si es necesario */
 }
 
 .skills-grid .skill:nth-child(1) {
@@ -501,7 +604,7 @@ header img{
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; 
+    gap: 0.4rem; 
 }
 
 .chip {
