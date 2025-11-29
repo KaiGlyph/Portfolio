@@ -68,6 +68,16 @@ function openModal(skill) {
             description: 'Experiencia construyendo funcionalidades dinámicas y manipulando el DOM, pero aún estoy profundizando en frameworks modernos.',
             level: 'medium'
         },
+        react: {
+            title: 'React',
+            description: 'Conocimientos sólidos en la creación de componentes reutilizables, gestión de estado y hooks en aplicaciones React.',
+            level: 'medium'
+        },
+        typescript: {
+            title: 'TypeScript',
+            description: 'Familiaridad con la tipificación estática y la integración de TypeScript en proyectos JavaScript para mejorar la calidad del código.',
+            level: 'medium'
+        },
         python: {
             title: 'Python',
             description: 'Uso habitual de GitHub para control de versiones, ramas, pull requests y colaboración en equipo.',
@@ -83,16 +93,22 @@ function openModal(skill) {
             description: 'Capacidad para ejecutar consultas simples y comprender estructuras de bases de datos relacionales.',
             level: 'medium'
         },
-        php: {
-            title: 'PHP',
-            description: 'Conocimientos básicos, principalmente para mantenimiento y ajustes menores en proyectos existentes.',
-            level: 'low'
-        },
         powerplatform: {
             title: 'Power Platform',
             description: 'Familiarizado con la creación básica de aplicaciones en Power Apps, flujos simples en Power Automate y uso inicial de Dataverse.',
             level: 'medium'
         },
+        php: {
+            title: 'PHP',
+            description: 'Conocimientos básicos, principalmente para mantenimiento y ajustes menores en proyectos existentes.',
+            level: 'low'
+        },
+        outsystems: {
+            title: 'OutSystems',
+            description: 'Conocimientos básicos en desarrollo low-code, enfocado en la creación rápida de aplicaciones empresariales simples.',
+            level: 'low'
+        }
+
     };
     
     const data = skillData[skill];
