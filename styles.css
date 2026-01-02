@@ -68,7 +68,7 @@ ul {
 
 .navbar img {
     width: auto;
-    height: 2.5rem;
+    height: 4.6rem;
     margin-left: 9.6%;
 }
 
@@ -206,7 +206,7 @@ header{
 }
 
 header img{
-    width: 37%;
+    width: 28%;
     height: auto;
     transition: transform 0.3s ease;
 }
