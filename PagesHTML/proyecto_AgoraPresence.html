@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Agora Presence | Jordi Gallardo</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Agora Presence - Aplicación de gestión de asistencia presencial desarrollada en Power Apps y Power Automate por Jordi Gallardo, para empresas con modelo de trabajo híbrido o presencial." />
+    <meta name="keywords" content="Power Apps, Power Automate, Gestión de Asistencia, Trabajo Híbrido, Reservas de Oficina, Microsoft Power Platform, Jordi Gallardo, automatización" />
+    <meta name="author" content="Jordi Gallardo" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Agora Presence — Gestión de Asistencia Presencial" />
+    <meta property="og:description" content="Aplicación empresarial para gestionar la asistencia a oficina en entornos híbridos, con calendario, solicitudes de cambio y gestión de espacios de trabajo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../Images/Proyectos/AgoraPresence.png" />
+    <meta property="og:url" content="https://kaiglyph.github.io/AgoraPresence/" />
+
+    <link rel="icon" href="../Images/Logos/KaiGlyphLogoBlanco.png" type="image/png" />
+    <link rel="stylesheet" href="../PagesCSS/generalproyectos.css" />
+    <link rel="stylesheet" href="../PagesCSS/agorapresence.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navname">
+            <a href="../index.html">
+                <img src="../Images/Logos/KaiGlyphLogoBlanco.png" alt="Jordi Gallardo">
+                <h2>Jordi Gallardo</h2>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li class="submenu-parent">
+                    <a href="../index.html#about">Sobre Mí</a>
+                    <ul class="submenu">
+                        <li class="submenu-parent">
+                            <a href="../index.html#about">Trayectorias</a>
+                            <ul class="submenu">
+                                <li><a href="trayectoria.html#experiencia">Experiencia Laboral</a></li>
+                                <li><a href="trayectoria.html#formacion">Formación Académica</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#proyects">Proyectos</a></li>
+                <li><a href="../index.html#teamwork">Valoraciones</a></li>
+                <li><a href="../index.html#contact">Contáctame</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<main>
+    <header>
+        <img src="../Images/Proyectos/AgoraPresence.png" alt="Agora Presence - Gestión de Asistencia Presencial" title="Agora Presence">
+        <div class="ExLaProyecto">
+            <h1>Agora Presence</h1>
+            <h3>
+                Aplicación empresarial desarrollada en <strong>Power Apps</strong> y <strong>Power Automate</strong> que permite <span>gestionar la asistencia presencial de empleados en entornos híbridos</span>, con calendario interactivo, solicitudes de cambio de día, gestión de espacios de trabajo y roles diferenciados para Administradores y Usuarios.
+            </h3>
+        </div>
+    </header>
+
+    <!-- Cómo funciona -->
+    <section class="como-funciona">
+        <h2>Cómo Funciona</h2>
+        <p>
+          Agora Presence guía a los usuarios a través de un sistema completo de gestión de asistencia, separando funcionalidades según el rol del usuario para garantizar una experiencia optimizada:
+        </p>
+
+        <div class="flujos">
+          <div class="flujo-item">
+            <span class="numero">1</span>
+            <h4>Calendario Mensual</h4>
+            <p>Visualización completa del mes con indicadores de quiénes asistirán cada día. Los usuarios pueden seleccionar sus días presenciales y ver la ocupación general.</p>
+          </div>
+          <div class="flujo-item">
+            <span class="numero">2</span>
+            <h4>Vista Semanal</h4>
+            <p>Tabla detallada de lunes a viernes que muestra la planificación semanal de asistencia, permitiendo una visión rápida y organizada.</p>
+          </div>
+          <div class="flujo-item">
+            <span class="numero">3</span>
+            <h4>Solicitudes de Cambio</h4>
+            <p>Los empleados pueden solicitar cambios de día, que son gestionadas por administradores mediante aprobación o rechazo automático.</p>
+          </div>
+          <div class="flujo-item">
+            <span class="numero">4</span>
+            <h4>Gestión de Espacios</h4>
+            <p>Administración de puestos de trabajo y espacios disponibles, asegurando una distribución eficiente de la capacidad de la oficina.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Roles y Permisos -->
+    <section class="roles">
+        <h2>Roles y Permisos</h2>
+        <p>
+          La aplicación implementa un sistema de roles diferenciados para garantizar que cada usuario acceda únicamente a las funcionalidades relevantes para su perfil:
+        </p>
+        
+        <div class="roles-container">
+          <div class="rol-card">
+            <div class="rol-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </div>
+            <h3>Usuario</h3>
+            <ul>
+              <li>Seleccionar días presenciales</li>
+              <li>Solicitar cambios de día</li>
+              <li>Ver calendario mensual</li>
+              <li>Consultar vista semanal</li>
+              <li>Ver historial de sus solicitudes</li>
+              <li>Recibir notificaciones de aprobación/rechazo</li>
+            </ul>
+          </div>
+          
+          <div class="rol-card">
+            <div class="rol-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+            </div>
+            <h3>Administrador</h3>
+            <ul>
+              <li>Todas las funcionalidades de Usuario</li>
+              <li>Aprobar/denegar solicitudes de cambio</li>
+              <li>Gestionar espacios de trabajo</li>
+              <li>Administrar capacidad de la oficina</li>
+              <li>Ver solicitudes pendientes</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+
+    <!-- Automatización y Tecnología -->
+    <section class="automatizacion">
+        <h2>Automatización Inteligente con Power Automate</h2>
+        <p>
+          La potencia de Agora Presence radica en su integración con <strong>Power Automate</strong>, que automatiza procesos críticos y mejora la experiencia del usuario:
+        </p>
+        
+        <div class="flujos-automatizacion">
+            <div class="flujo-automatizacion">
+                <h4>Flujo 1: Gestión de Solicitudes</h4>
+                <p>Permite aprobar o denegar solicitudes de cambio de día directamente desde el correo electrónico o Microsoft Teams, con notificaciones automáticas al usuario solicitante.</p>
+            </div>
+            <div class="flujo-automatizacion">
+                <h4>Flujo 2: Historial de Versiones</h4>
+                <p>Recopila y almacena automáticamente el historial de versiones desde SharePoint, manteniendo un registro completo de todas las modificaciones realizadas en las reservas.</p>
+            </div>
+        </div>
+
+        <h3 class="demo-title">Demostración en Vídeo</h3>
+        <p>
+          A continuación puedes ver una demostración completa de la aplicación en funcionamiento. El vídeo muestra las principales funcionalidades, incluyendo el flujo de aprobación de solicitudes y las notificaciones automáticas.
+        </p>
+
+        <div class="video-container">
+            <iframe width="1524" height="629" src="https://www.youtube.com/embed/1WDIEgtnGfc" 
+            title="AgoraPresence | Aplicación de Gestión de Reservas con Power Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Tecnologías Utilizadas -->
+    <section class="tecnologias">
+        <h2>Tecnologías Utilizadas</h2>
+        <div class="tecnologias-grid">
+            <div class="tecnologia-card">
+                <h3>Power Apps</h3>
+                <p>Desarrollo de la interfaz de usuario, gestión de datos y lógica de negocio de la aplicación.</p>
+            </div>
+            <div class="tecnologia-card">
+                <h3>Power Automate</h3>
+                <p>Automatización de flujos de trabajo, notificaciones y procesos de aprobación.</p>
+            </div>
+            <div class="tecnologia-card">
+                <h3>SharePoint</h3>
+                <p>Almacenamiento de datos, gestión de versiones y sincronización de información.</p>
+            </div>
+            <div class="tecnologia-card">
+                <h3>Microsoft Teams</h3>
+                <p>Integración para aprobación de solicitudes y notificaciones en tiempo real.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+    <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
+    <div class="footer-social">
+        <a href="https://github.com/KaiGlyph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.22c-3.338.724-4.033-1.415-4.033-1.415-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.304.76-1.604-2.665-.304-5.466-1.33-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.625-5.475 5.922.43.37.823 1.103.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+        </a>
+        <a href="https://linkedin.com/in/jordi-gallardo-sanchez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20.447 20.452H16.9v-5.569c0-1.328-.027-3.038-1.852-3.038-1.853 0-2.136 1.447-2.136 2.941v5.666H9.325V9h3.397v1.561h.047c.473-.9 1.633-1.852 3.363-1.852 3.594 0 4.256 2.366 4.256 5.444v6.299zM5.337 7.433c-1.09 0-1.973-.882-1.973-1.973 0-1.09.883-1.973 1.973-1.973 1.09 0 1.973.883 1.973 1.973 0 1.09-.883 1.973-1.973 1.973zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.555C0 23.23.792 24 1.771 24h20.451c.98 0 1.778-.77 1.778-1.722V1.722C24 .77 23.204 0 22.225 0z"/>
+            </svg>
+        </a>
+        <a href="mailto:jordigallardo0621@gmail.com" aria-label="Email" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

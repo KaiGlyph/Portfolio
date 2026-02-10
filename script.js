@@ -168,12 +168,104 @@ function stopAutoScroll() {
     clearInterval(autoScrollInterval);
 }
 
-// Iniciar auto-scroll cuando la página carga
+// Filtro de proyectos
+function filtrarProyectos(filterType) {
+    const filterButtons = document.querySelectorAll('.filtro-btn');
+    const tarjetasProyecto = document.querySelectorAll('.tarjetaproyecto');
+    
+    // Remover clase activa de todos los botones
+    filterButtons.forEach(btn => btn.classList.remove('activo'));
+    
+    // Añadir clase activa al botón seleccionado
+    event.target.classList.add('activo');
+    
+    tarjetasProyecto.forEach(tarjeta => {
+        const lenguajes = tarjeta.querySelectorAll('.lenguajes .chip');
+        const lenguajesArray = Array.from(lenguajes).map(chip => chip.textContent.trim().toLowerCase());
+        
+        let mostrar = false;
+        
+        switch(filterType) {
+            case 'all':
+                mostrar = true;
+                break;
+                
+            case 'powerplatform':
+                // Verificar si tiene Power Apps o Power Automate
+                mostrar = lenguajesArray.some(lenguaje => 
+                    lenguaje.includes('power apps') || 
+                    lenguaje.includes('power automate')
+                );
+                break;
+                
+            case 'htmlcssjs':
+                // Verificar si tiene HTML, CSS y JS juntos
+                const tieneHTML = lenguajesArray.includes('html');
+                const tieneCSS = lenguajesArray.includes('css');
+                const tieneJS = lenguajesArray.includes('js');
+                
+                mostrar = tieneHTML && tieneCSS && tieneJS;
+                break;
+                
+            case 'python':
+                // Verificar si tiene Python
+                mostrar = lenguajesArray.includes('python');
+                break;
+                
+            case 'php':
+                // Verificar si tiene PHP
+                mostrar = lenguajesArray.includes('php');
+                break;
+                
+            case 'reactts':
+                // Verificar si tiene React Y TypeScript juntos
+                const tieneReact = lenguajesArray.includes('react');
+                const tieneTypeScript = lenguajesArray.includes('typescript') || lenguajesArray.includes('type script');
+                
+                mostrar = tieneReact && tieneTypeScript;
+                break;
+        }
+        
+        if (mostrar) {
+            tarjeta.style.display = 'block';
+            tarjeta.style.opacity = '0';
+            setTimeout(() => {
+                tarjeta.style.opacity = '1';
+                tarjeta.style.transform = 'translateY(0)';
+            }, 10);
+        } else {
+            tarjeta.style.display = 'none';
+        }
+    });
+}
+
+// Iniciar auto-scroll cuando la página carga y configurar filtros
 document.addEventListener('DOMContentLoaded', () => {
+    // Auto-scroll del carousel
     startAutoScroll();
     
     // Pausar auto-scroll cuando el usuario interactúa con el carousel
     const carouselContainer = document.querySelector('.carousel-container');
     carouselContainer.addEventListener('mouseenter', stopAutoScroll);
     carouselContainer.addEventListener('mouseleave', startAutoScroll);
+    
+    // Configurar filtros de proyectos
+    const filterButtons = document.querySelectorAll('.filtro-btn');
+    
+    // Event listeners para los botones de filtro
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const filterType = event.target.getAttribute('data-filter');
+            filtrarProyectos(filterType);
+        });
+    });
+    
+    // Inicializar con todos los proyectos visibles
+    const tarjetasProyecto = document.querySelectorAll('.tarjetaproyecto');
+    setTimeout(() => {
+        tarjetasProyecto.forEach(tarjeta => {
+            tarjeta.style.opacity = '1';
+            tarjeta.style.transform = 'translateY(0)';
+        });
+    }, 100);
 });

@@ -544,6 +544,72 @@ header img{
     padding: 6%;
 }
 
+/* ========== Filtros de Proyectos (versión corregida) ========== */
+.filtros-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+}
+
+.filtro-btn {
+    position: relative;
+    padding: 0.9rem 1.8rem;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.filtro-btn:hover {
+    background-color: rgba(170, 130, 250, 0.1);
+    border-color: var(--color-text-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(170, 130, 250, 0.2);
+    color: var(--color-text-hover);
+}
+
+.filtro-btn.activo {
+    background-color: var(--color-primary);
+    border-color: var(--color-text-hover);
+    color: var(--color-text);
+    box-shadow: 0 0 20px rgba(170, 130, 250, 0.4);
+    transform: translateY(-2px);
+}
+
+.filtro-btn.activo:hover {
+    background-color: var(--color-text-hover);
+    box-shadow: 0 0 25px rgba(170, 130, 250, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Efecto de resplandor en el botón activo */
+.filtro-btn.activo::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #aa82fa, #412575, #aa82fa);
+    border-radius: 12px;
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -903,7 +969,17 @@ footer a:hover {
         width: 10%;
         height: 10%;
     }
+        .filtros-proyectos {
+        gap: 10px;
+        padding: 1rem 0;
+    }
+    
+    .filtro-btn {
+        padding: 0.8rem 1.4rem;
+        font-size: 0.95rem;
+    }
 }
+
 
 /* Mobile First - Hamburger Menu */
 @media (max-width: 768px) {
@@ -1044,6 +1120,20 @@ footer a:hover {
         margin-top: 1rem;
     }
 
+    .filtros-proyectos {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 1rem 0;
+    }
+    
+    .filtro-btn {
+        width: 100%;
+        max-width: 320px;
+        padding: 1rem 1.6rem;
+        font-size: 1.1rem;
+    }
+
     #proyects .tarjetas {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1064,10 +1154,16 @@ footer a:hover {
     }
 }
 
+
 @media (max-width: 600px) {
     .navmenu {
         width: 250px;
         padding: 4rem 1.5rem 2rem 1.5rem;
+    }
+
+    .filtro-btn {
+        padding: 0.9rem 1.4rem;
+        font-size: 1rem;
     }
 
     #contact form {
