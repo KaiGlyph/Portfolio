@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Anikai | Jordi Gallardo</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Anikai es una plataforma de anime con secciones, favoritos y organización de contenido para fans del anime, desarrollada con React, TypeScript y Vercel por Jordi Gallardo." />
+    <meta name="keywords" content="Anikai, Jordi Gallardo, anime, plataforma anime, React, TypeScript, Vercel, favoritos anime" />
+    <meta name="author" content="Jordi Gallardo" />
+
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Anikai — Plataforma de Anime" />
+    <meta property="og:description" content="Plataforma de anime con secciones, favoritos y organización de contenido para fans del anime." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../Images/Proyectos/Anikai.png" />
+    <meta property="og:url" content="https://anikai-two.vercel.app/" />
+
+    <link rel="icon" href="../Images/Logos/KaiGlyphLogoBlanco.png" type="image/png" />
+    <link rel="stylesheet" href="../PagesCSS/generalproyectos.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navname">
+            <a href="../index.html">
+                <img src="../Images/Logos/KaiGlyphLogoBlanco.png" alt="Jordi Gallardo">
+                <h2>Jordi Gallardo</h2>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li class="submenu-parent">
+                    <a href="../index.html#about">Sobre Mí</a>
+                    <ul class="submenu">
+                        <li class="submenu-parent">
+                            <a href="../index.html#about">Trayectorias</a>
+                            <ul class="submenu">
+                                <li><a href="../PagesHTML/trayectoriaprofesional.html#experiencia">Experiencia Laboral</a></li>
+                                <li><a href="../PagesHTML/trayectoriaprofesional.html#formacion">Formación Académica</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#proyects">Proyectos</a></li>
+                <li><a href="../index.html#teamwork">Valoraciones</a></li>
+                <li><a href="../index.html#contact">Contáctame</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<main>
+    <header>
+        <img src="../Images/Proyectos/placeholder-react.png" alt="Anikai" title="Anikai">
+        <div class="ExLaProyecto">
+            <h1>Anikai</h1>
+            <h3>
+                Anikai es una <span>plataforma web dedicada al mundo del anime</span>, diseñada tanto para organizar colecciones personales como para permitir que la comunidad anime interactúe y comparta sus series favoritas. Desarrollada con React, TypeScript y desplegada en Vercel.
+            </h3>
+        </div>
+    </header>
+
+    <!-- Funcionalidades -->
+    <section class="funcionalidades">
+        <h2>Funcionalidades Destacadas</h2>
+        <ul>
+            <li><strong>Catálogo de Anime:</strong> Base de datos completa con información detallada de series, películas y OVAs del mundo del anime.</li>
+            <li><strong>Sistema de Favoritos:</strong> Guardar y organizar los animes favoritos de cada usuario, con listas personalizadas.</li>
+            <li><strong>Mi Lista:</strong> Seguimiento del progreso de visualización: pendiente, en curso, completado, en pausa, abandonado.</li>
+            <li><strong>Comunidad:</strong> Espacio para reseñas, recomendaciones y discusiones entre fans del anime.</li>
+            <li><strong>Búsqueda y Filtrado Avanzado:</strong> Por género, año, estudio, estado, puntuación y más criterios.</li>
+            <li><strong>Sistema de Valoraciones:</strong> Puntuaciones y reseñas de usuarios para descubrir nuevas series.</li>
+            <li><strong>Recomendaciones Personalizadas:</strong> Basadas en preferencias y listas del usuario.</li>
+        </ul>
+    </section>
+
+    <!-- Secciones Principales -->
+    <section class="instalacion">
+        <h2>Secciones Principales</h2>
+        <p>
+          Anikai está organizado en varias secciones para ofrecer una experiencia completa a los fans del anime:
+        </p>
+        <ul>
+            <li><strong>Explorar:</strong> Descubre nuevos animes por género, popularidad, estreno reciente o recomendaciones.</li>
+            <li><strong>Mi Lista:</strong> Organiza tus animes en diferentes estados: viendo, completado, pendiente, en pausa, abandonado.</li>
+            <li><strong>Favoritos:</strong> Colección personal de tus animes preferidos para acceso rápido.</li>
+            <li><strong>Comunidad:</strong> Foro de discusiones, reseñas y recomendaciones entre usuarios.</li>
+            <li><strong>Perfil:</strong> Estadísticas personales, historial de actividad y configuración de preferencias.</li>
+            <li><strong>Búsqueda:</strong> Motor de búsqueda avanzado con múltiples filtros y opciones de ordenación.</li>
+        </ul>
+    </section>
+
+    <!-- Tecnologías Utilizadas -->
+    <section class="instalacion">
+        <h2>Tecnologías Utilizadas</h2>
+        <p>
+          Anikai está construido con las siguientes tecnologías:
+        </p>
+        <ul>
+            <li><strong>React 18:</strong> Biblioteca JavaScript para interfaces de usuario interactivas y dinámicas.</li>
+            <li><strong>TypeScript:</strong> Tipado estático para mayor seguridad y mantenibilidad del código.</li>
+            <li><strong>Vite:</strong> Build tool moderno y rápido para desarrollo frontend optimizado.</li>
+            <li><strong>Vercel:</strong> Plataforma de hosting y despliegue para aplicaciones web modernas.</li>
+            <li><strong>Tailwind CSS:</strong> Framework CSS utility-first para diseño rápido y consistente.</li>
+            <li><strong>React Router DOM:</strong> Sistema de enrutamiento para navegación entre secciones.</li>
+            <li><strong>Framer Motion:</strong> Animaciones fluidas y transiciones para mejorar la UX.</li>
+            <li><strong>Local Storage API:</strong> Almacenamiento de datos del usuario en el navegador.</li>
+        </ul>
+    </section>
+
+    <!-- Ver Proyecto -->
+    <section class="instalacion">
+        <h2>Acceder al Proyecto</h2>
+        <p>
+          Anikai está actualmente en desarrollo activo. Puedes acceder a la versión actual del proyecto desde el siguiente enlace:
+        </p>
+        <div class="boton-descarga">
+            <a href="https://anikai-two.vercel.app/" class="btn-download" target="_blank">Ver Proyecto Anikai</a>
+            <a href="https://github.com/KaiGlyph/Anikai" class="btn-download" target="_blank">Ver Repositorio GitHub</a>
+        </div>
+    </section>
+
+    <!-- Estado del Proyecto -->
+    <section class="instalacion">
+        <h2>Estado del Proyecto</h2>
+        <p>
+          En Desarrollo Activo
+        </p>
+        <p>
+          Anikai se encuentra en fase inicial de desarrollo. Se está trabajando en la estructura base, el diseño de la interfaz y la integración con la base de datos para almacenar la información de anime y usuarios.
+        </p>
+        <p>
+          <strong>Próximos Hitos:</strong>
+        </p>
+        <ul>
+            <li>Diseño y desarrollo de la interfaz principal del catálogo</li>
+            <li>Implementación del sistema de búsqueda y filtrado</li>
+            <li>Creación del sistema de favoritos y listas personales</li>
+            <li>Integración con base de datos para almacenamiento de datos</li>
+            <li>Desarrollo de la sección de comunidad y reseñas</li>
+            <li>Optimización para dispositivos móviles</li>
+            <li>Sistema de autenticación de usuarios</li>
+            <li>Panel de estadísticas personales</li>
+            <li>Pruebas de usabilidad y rendimiento</li>
+        </ul>
+
+        <p>
+          <strong>Inspiración:</strong>
+        </p>
+        <p>
+          Anikai está inspirado en plataformas como MyAnimeList y AniList, pero con un enfoque en la simplicidad, el diseño moderno y la experiencia de usuario intuitiva. El objetivo es crear una plataforma que combine la funcionalidad de las grandes plataformas con una interfaz más accesible y atractiva visualmente.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+    <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
+    <div class="footer-social">
+        <a href="https://github.com/KaiGlyph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.22c-3.338.724-4.033-1.415-4.033-1.415-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.304.76-1.604-2.665-.304-5.466-1.33-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.625-5.475 5.922.43.37.823 1.103.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+        </a>
+        <a href="https://linkedin.com/in/jordi-gallardo-sanchez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20.447 20.452H16.9v-5.569c0-1.328-.027-3.038-1.852-3.038-1.853 0-2.136 1.447-2.136 2.941v5.666H9.325V9h3.397v1.561h.047c.473-.9 1.633-1.852 3.363-1.852 3.594 0 4.256 2.366 4.256 5.444v6.299zM5.337 7.433c-1.09 0-1.973-.882-1.973-1.973 0-1.09.883-1.973 1.973-1.973 1.09 0 1.973.883 1.973 1.973 0 1.09-.883 1.973-1.973 1.973zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.555C0 23.23.792 24 1.771 24h20.451c.98 0 1.778-.77 1.778-1.722V1.722C24 .77 23.204 0 22.225 0z"/>
+            </svg>
+        </a>
+        <a href="mailto:jordigallardo0621@gmail.com" aria-label="Email" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
