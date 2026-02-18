@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Support Center | Jordi Gallardo</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Support Center - Sistema empresarial de gestión de incidencias IT/mantenimiento desarrollado con Power Platform. MVP en 1 semana con Power Apps, Power Automate y SharePoint." />
+    <meta name="keywords" content="Support Center, Power Apps, Power Automate, SharePoint, gestión de incidencias, IT, mantenimiento, Jordi Gallardo" />
+    <meta name="author" content="Jordi Gallardo" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Support Center — Gestión de Incidencias IT" />
+    <meta property="og:description" content="Sistema empresarial de gestión de incidencias IT/mantenimiento. MVP desarrollado en 1 semana con Power Platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../Images/Proyectos/SupportCenter.png" />
+    <meta property="og:url" content="https://kaiglyph.github.io/PagesHTML/proyecto_SupportCenter.html" />
+
+    <link rel="icon" href="../Images/Logos/KaiGlyphLogoBlanco.png" type="image/png" />
+    <link rel="stylesheet" href="../PagesCSS/generalproyectos.css" />
+    <link rel="stylesheet" href="../PagesCSS/SupportCenter.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navname">
+            <a href="../index.html">
+                <img src="../Images/Logos/KaiGlyphLogoBlanco.png" alt="Jordi Gallardo">
+                <h2>Jordi Gallardo</h2>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li class="submenu-parent">
+                    <a href="../index.html#about">Sobre Mí</a>
+                    <ul class="submenu">
+                        <li class="submenu-parent">
+                            <a href="../index.html#about">Trayectorias</a>
+                            <ul class="submenu">
+                                <li><a href="trayectoriaprofesional.html#experiencia">Experiencia Laboral</a></li>
+                                <li><a href="trayectoriaprofesional.html#formacion">Formación Académica</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#proyects">Proyectos</a></li>
+                <li><a href="../index.html#teamwork">Valoraciones</a></li>
+                <li><a href="../index.html#contact">Contáctame</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<main>
+    <header>
+        <img src="../Images/Proyectos/SupportCenter.png" alt="Support Center" title="Support Center">
+        <div class="ExLaProyecto">
+            <h1>Support Center</h1>
+            <h3>
+                Sistema empresarial de <span>gestión de incidencias IT/mantenimiento</span>. MVP desarrollado en 1 semana con Power Apps, Power Automate y SharePoint. Permite reportar incidencias con foto desde móvil, clasificar por categoría y hacer seguimiento en tiempo real.
+            </h3>
+        </div>
+    </header>
+
+    <!-- Resumen del Proyecto -->
+    <section class="resumen-proyecto-support">
+        <h2>Resumen del Proyecto</h2>
+        <div class="contenido-resumen">
+            <p>
+                <strong>Support Center</strong> es un sistema empresarial de gestión de incidencias IT y mantenimiento desarrollado completamente con <strong>Power Platform</strong> (Power Apps, Power Automate y SharePoint) en un tiempo récord de <strong>1 semana</strong>. La solución permite a los empleados reportar incidencias técnicas desde cualquier dispositivo móvil incluyendo fotografías, clasificándolas por categorías específicas (PC, impresora, aire acondicionado, red, mobiliario) y asignando niveles de prioridad (Alta, Media, Baja).
+            </p>
+            
+            <p>
+                La arquitectura se basa en <strong>3 tablas principales de SharePoint</strong>: <strong>UsuariosEmpresa</strong> (control de acceso por roles: Usuario/Técnico/Admin), <strong>TecnicosSoporte</strong> (especialidades en IT Hardware/Software, Redes, Climatización y Facilities) e <strong>Incidencias</strong> (núcleo operativo del sistema). El flujo de trabajo sigue un ciclo de vida estructurado: Nueva → Asignada → En proceso → Resuelta, permitiendo un seguimiento completo del estado de cada incidencia.
+            </p>
+            
+            <p>
+    Integra <strong>dashboards de Power BI</strong> con métricas clave: incidencias por categoría, tiempos de resolución, rendimiento por técnico y tendencias. Los responsables disponen de <strong>informes en tiempo real</strong> para toma de decisiones basada en datos. Enfoque minimalista listo para producción en Microsoft 365.
+</p>
+        </div>
+    </section>
+
+    <!-- Características Principales -->
+    <section class="caracteristicas-support">
+        <h2>Características Principales</h2>
+        <div class="caracteristicas-grid">
+            <div class="caracteristica-item">
+                <h3>Reporte desde Móvil</h3>
+                <p>Interfaz optimizada para dispositivos móviles que permite capturar y enviar fotografías de incidencias directamente desde el teléfono del usuario.</p>
+            </div>
+            
+            <div class="caracteristica-item">
+                <h3>Clasificación Inteligente</h3>
+                <p>Categorización por tipo (PC, impresora, aire acondicionado, red, mobiliario) con asignación automática de prioridad Alta/Media/Baja.</p>
+            </div>
+            
+            <div class="caracteristica-item">
+                <h3>Seguimiento de Estados</h3>
+                <p>Flujo completo: Nueva → Asignada → En proceso → Resuelta. Visualización en tiempo real del progreso de cada incidencia.</p>
+            </div>
+            
+            <div class="caracteristica-item">
+                <h3>Gestión por Roles</h3>
+                <p>Control de acceso diferenciado: Usuarios (reportan), Técnicos (resuelven según especialidad) y Admins (gestión completa).</p>
+            </div>
+            
+            <div class="caracteristica-item">
+                <h3>Notificaciones Automáticas</h3>
+                <p>Alertas automáticas a técnicos especializados mediante Power Automate según categoría y disponibilidad.</p>
+            </div>
+            
+            <div class="caracteristica-item">
+                <h3>Arquitectura Eficiente</h3>
+                <p>3 tablas SharePoint optimizadas: UsuariosEmpresa, TecnicosSoporte e Incidencias. MVP desarrollado en 1 semana.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementación -->
+    <section class="implementacion">
+        <h2>Implementación y Configuración</h2>
+        <p>
+          Support Center está desarrollado sobre <strong>Microsoft Power Platform</strong> y <strong>SharePoint Online</strong>.  
+          Para implementarlo en tu organización, sigue estos pasos:
+        </p>
+        <p>
+          Requisitos: Licencia de Power Apps/Power Automate y acceso a SharePoint Online.
+        </p>
+
+        <ol class="pasos">
+          <li>
+            <strong>Acceder a Power Platform:</strong>
+            <ul>
+              <li>Inicia sesión en <a href="https://make.powerapps.com" target="_blank">make.powerapps.com</a> con tu cuenta corporativa.</li>
+              <li>Selecciona el entorno donde importarás la solución.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Importar la solución:</strong>
+            <ul>
+              <li>Ve a <strong>Soluciones</strong> → <strong>Importar</strong>.</li>
+              <li>Selecciona el archivo <code>SupportCenter_Solution.zip</code> proporcionado.</li>
+              <li>Confirma las conexiones de datos (SharePoint, Office 365 Users, Outlook).</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Configurar listas de SharePoint:</strong>
+            <ul>
+              <li>Las listas se crean automáticamente: <code>UsuariosEmpresa</code>, <code>TecnicosSoporte</code>, <code>Incidencias</code>.</li>
+              <li>Personaliza las categorías según las necesidades de tu organización.</li>
+              <li>Configura los permisos por roles (Usuario/Técnico/Admin).</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Activar flujos de Power Automate:</strong>
+            <ul>
+              <li>Activa los flujos: <code>Notificacion_NuevaIncidencia</code>, <code>Alerta_CambioEstado</code>, <code>Resumen_Diario</code>.</li>
+              <li>Verifica que los triggers estén vinculados correctamente a las listas.</li>
+              <li>Configura las plantillas de email personalizadas.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Compartir la aplicación:</strong>
+            <ul>
+              <li>Desde Power Apps, selecciona <strong>Compartir</strong> y añade los usuarios o grupos de seguridad.</li>
+              <li>Los usuarios recibirán la app en su portal de Power Apps o vía enlace directo.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="boton-descarga">
+            <a href="#" class="btn-download" target="_blank">DESCARGAR SOLUCIÓN (.ZIP)</a>
+            <a href="#" class="btn-download" target="_blank">DOCUMENTACIÓN TÉCNICA (PDF)</a>
+            <a href="#" class="btn-download" target="_blank">PLANTILLA SHAREPOINT (.STP)</a>
+        </div>
+        
+        <p>¿Prefieres ver una demostración antes de implementar? Hemos preparado un vídeo con un recorrido por las funcionalidades clave.</p>
+
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Support Center | Demo Power Platform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Demo / Acceso -->
+    <section class="acceso-demo">
+        <h2>Acceder a la Aplicación</h2>
+        <p>
+        Si tu organización ya tiene Power Platform configurado, puedes acceder directamente a la aplicación mediante el enlace compartido por tu administrador.  
+        También ofrecemos una <strong>demo interactiva</strong> con datos de ejemplo para explorar las funcionalidades sin necesidad de instalación.
+        </p>
+        <a href="#" target="_blank" class="btn-project">ACCEDER A LA DEMO</a>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+    <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
+    <div class="footer-social">
+        <a href="https://github.com/KaiGlyph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.22c-3.338.724-4.033-1.415-4.033-1.415-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.304.76-1.604-2.665-.304-5.466-1.33-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.804 5.625-5.475 5.922.43.37.823 1.103.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        </a>
+        <a href="https://linkedin.com/in/jordi-gallardo-sanchez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M20.447 20.452H16.9v-5.569c0-1.328-.027-3.038-1.852-3.038-1.853 0-2.136 1.447-2.136 2.941v5.666H9.325V9h3.397v1.561h.047c.473-.9 1.633-1.852 3.363-1.852 3.594 0 4.256 2.366 4.256 5.444v6.299zM5.337 7.433c-1.09 0-1.973-.882-1.973-1.973 0-1.09.883-1.973 1.973-1.973 1.09 0 1.973.883 1.973 1.973 0 1.09-.883 1.973-1.973 1.973zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.555C0 23.23.792 24 1.771 24h20.451c.98 0 1.778-.77 1.778-1.722V1.722C24 .77 23.204 0 22.225 0z"/>
+        </svg>
+        </a>
+        <a href="mailto:jordigallardo0621@gmail.com" aria-label="Email" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        </a>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
