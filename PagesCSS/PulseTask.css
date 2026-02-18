@@ -365,10 +365,8 @@ header .ExLaProyecto h3 {
     }
 }
 
-/* ===============================
-   Video Container
-   =============================== */
-.instalacion .video-container {
+/* Video Container  */
+.implementacion .video-container {
     margin: 3rem auto 2rem auto;
     max-width: 900px;
     border: 2px solid var(--color-primary);
@@ -377,17 +375,20 @@ header .ExLaProyecto h3 {
     overflow: hidden;
     position: relative;
     background: #000;
+    padding-bottom: 36.25%; /* 16:9 Aspect Ratio */
+    height: 0;
 }
 
-.instalacion .video-container iframe {
+.implementacion .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    position: relative;
+    height: 100%;
     border: none;
 }
 
-.instalacion .video-container p {
+.implementacion .video-container p {
     text-align: center;
     font-size: 1rem;
     color: var(--color-text);
