@@ -184,33 +184,49 @@ header .ExLaProyecto h3 span {
     margin: 1rem 0 1.5rem 1rem;
 }
 
-/* Pasos sin números automáticos */
 .pasos {
     margin: 2rem 0 2.5rem 1rem;
     padding: 0;
     max-width: 880px;
-    list-style: none;
+    counter-reset: paso; /* Reinicia el contador */
 }
 
 .pasos li {
     margin-bottom: 1.5rem;
-    padding: 1.2rem;
+    padding: 1.2rem 1rem 1rem 3.5rem; /* Espacio para el badge */
+    position: relative;
     background: var(--color-submenu-background);
     border-radius: 8px;
     border: 1px solid rgba(65, 37, 117, 0.3);
     transition: all 0.3s ease;
     line-height: 1.7;
-    list-style: none;
-}
-
-.pasos li::marker {
-    content: none;
+    list-style: none; /* Ocultamos el número por defecto del <ol> */
 }
 
 .pasos li:hover {
     border-color: var(--color-text-hover);
     transform: translateX(4px);
     box-shadow: 0 4px 15px rgba(170, 130, 250, 0.15);
+}
+
+/* Badge numérico en esquina superior izquierda */
+.pasos li::before {
+    content: counter(paso);
+    counter-increment: paso; /* Incrementa el contador */
+    position: absolute;
+    top: 0.5rem;
+    left: 0.8rem;
+    width: 26px;
+    height: 26px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(65, 37, 117, 0.4);
 }
 
 .pasos li ul {
@@ -225,6 +241,10 @@ header .ExLaProyecto h3 span {
     background: transparent;
     border: none;
     font-size: 1rem;
+}
+
+.pasos li ul li::before {
+    content: none;
 }
 
 .pasos code {
@@ -488,8 +508,16 @@ header .ExLaProyecto h3 span {
     }
     
     .pasos li {
-        padding: 1rem;
+        padding: 1rem 0.8rem 0.8rem 3.2rem;
         font-size: 0.95rem;
+    }
+    
+    .pasos li::before {
+        top: 0.6rem;
+        left: 0.8rem;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
     }
     
     .boton-descarga {
