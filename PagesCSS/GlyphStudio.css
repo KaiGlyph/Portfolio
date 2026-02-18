@@ -1,0 +1,284 @@
+/* ========== Glyph Studio - Estilos ========== */
+
+/* Header del Proyecto - Layout en dos columnas */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-navbackground);
+    padding: 4rem 2rem;
+    gap: 3rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+header > img,
+header > .ExLaProyecto {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header img {
+    flex: 0 0 50%;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+    object-fit: cover;
+}
+
+header img:hover {
+    transform: scale(1.02);
+}
+
+.ExLaProyecto {
+    flex: 1;
+    max-width: 700px;
+}
+
+.ExLaProyecto h1 {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    background:var(--color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+.ExLaProyecto h3 {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.ExLaProyecto h3 span {
+    display: inline;
+    color: var(--color-text-hover);
+    font-weight: 600;
+}
+
+/* Wrapper para centrar contenido */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* Secciones generales */
+section {
+    padding: 4rem 2rem;
+    background-color: var(--color-background);
+    width: 100%;
+}
+
+section:nth-child(even) {
+    background-color: var(--color-navbackground);
+}
+
+section h2 {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: left;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--color-primary);
+    display: inline-block;
+}
+
+section > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    color: #ccc;
+    text-align: left;
+}
+
+/* Listas de funcionalidades y tecnologías */
+section ul {
+    list-style: none;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section ul li {
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+section ul li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 20px rgba(170, 130, 250, 0.2);
+    border-left-color: var(--color-text-hover);
+}
+
+section ul li strong {
+    color: var(--color-text-hover);
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+}
+
+
+/* Estado del Proyecto */
+.estado-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, rgba(170, 130, 250, 0.2), rgba(170, 130, 250, 0.1));
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(170, 130, 250, 0.3);
+}
+
+.badge-pulse {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-50%) scale(1.2);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .ExLaProyecto {
+        max-width: 100%;
+    }
+
+    .ExLaProyecto h1 {
+        font-size: 2.8rem;
+    }
+
+    section h2 {
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 4px solid var(--color-primary);
+        padding-bottom: 0.5rem;
+    }
+
+    section > p {
+        text-align: center;
+    }
+
+    section ul {
+        text-align: left;
+    }
+
+    .boton-descarga {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .ExLaProyecto h1 {
+        font-size: 2.2rem;
+    }
+
+    .ExLaProyecto h3 {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section ul li {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    .ExLaProyecto h1 {
+        font-size: 1.8rem;
+    }
+
+    .ExLaProyecto h3 {
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    section ul li {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .badge-text {
+        font-size: 0.85rem;
+    }
+}
