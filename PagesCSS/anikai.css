@@ -1,0 +1,257 @@
+/* ========================================
+   Anikai — CSS específico de proyecto
+   Complementa generalproyectos.css
+   Paleta: Lila portfolio
+   ======================================== */
+
+:root {
+    --anikai-surface: #161616;
+    --anikai-border:  rgba(170, 130, 250, 0.12);
+    --anikai-glow:    rgba(170, 130, 250, 0.25);
+}
+
+/* ── Header ──────────────────────────────── */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-navbackground);
+    padding: 4rem 6%;
+    text-align: center;
+    gap: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Destello lila fondo */
+header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(170, 130, 250, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+header img {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow:
+        0 0 0 1px rgba(170, 130, 250, 0.15),
+        0 12px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+header img:hover {
+    transform: scale(1.015) translateY(-4px);
+    box-shadow:
+        0 0 0 1px rgba(170, 130, 250, 0.35),
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(170, 130, 250, 0.1);
+}
+
+.ExLaProyecto {
+    max-width: 860px;
+    position: relative;
+    z-index: 1;
+}
+
+.ExLaProyecto h1 {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 3.6rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-text-hover);
+    letter-spacing: 3px;
+}
+
+.ExLaProyecto h3 {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    color: rgba(236, 236, 236, 0.8);
+}
+
+.ExLaProyecto h3 span {
+    color: var(--color-text-hover);
+    font-weight: 600;
+}
+
+/* ── Padding de secciones ────────────────── */
+section {
+    padding: 4.5rem 6%;
+}
+
+/* ── Títulos — sobreescribe el general ───── */
+.funcionalidades h2,
+.instalacion h2 {
+    font-size: 2rem;
+    font-family: 'Kenyan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 2rem;
+    padding-left: 1.2rem;
+    border-left: 4px solid var(--color-primary);
+    color: var(--color-text-hover);
+    display: inline-block;
+}
+
+/* ── Listas de funcionalidades ───────────── */
+.funcionalidades li {
+    background: linear-gradient(135deg, var(--anikai-surface), #111111);
+    border-left: 3px solid var(--color-text-hover);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), inset 0 0 0 1px var(--anikai-border);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    max-width: 960px;
+}
+
+.funcionalidades li:hover {
+    box-shadow: 0 4px 20px var(--anikai-glow), inset 0 0 0 1px rgba(170, 130, 250, 0.25);
+    transform: translateX(8px);
+}
+
+.funcionalidades strong {
+    color: var(--color-text-hover);
+}
+
+/* ── Listas dentro de .instalacion ──────── */
+.instalacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 960px;
+}
+
+.instalacion li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    padding: 0.85rem 1.1rem;
+    background: linear-gradient(135deg, var(--anikai-surface), #111111);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), inset 0 0 0 1px var(--anikai-border);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.instalacion li:hover {
+    border-left-color: var(--color-text-hover);
+    box-shadow: 0 4px 20px var(--anikai-glow), inset 0 0 0 1px rgba(170, 130, 250, 0.2);
+    transform: translateX(8px);
+}
+
+.instalacion li strong {
+    color: var(--color-text-hover);
+}
+
+/* Párrafos — el general los tiene con margin-left: 1.6% */
+.instalacion p {
+    margin-left: 0;
+    max-width: 960px;
+}
+
+/* ── Botón ───────────────────────────────── */
+.boton-descarga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-text-hover));
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(170, 130, 250, 0.35);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.45s ease;
+}
+
+.btn-download:hover::before {
+    left: 160%;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(170, 130, 250, 0.5);
+    color: #ffffff;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 4%;
+        gap: 2rem;
+    }
+
+    .ExLaProyecto h1 {
+        font-size: 2.6rem;
+        letter-spacing: 2px;
+    }
+
+    .ExLaProyecto h3 {
+        font-size: 1.05rem;
+    }
+
+    section {
+        padding: 3rem 4%;
+    }
+
+    .funcionalidades h2,
+    .instalacion h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-download {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header::before {
+        display: none;
+    }
+
+    .ExLaProyecto h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .funcionalidades h2,
+    .instalacion h2 {
+        font-size: 1.4rem;
+    }
+}

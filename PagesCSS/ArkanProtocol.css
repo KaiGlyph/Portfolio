@@ -1,4 +1,4 @@
-/* ========== Arcan Protocol - Estilos adaptados de Agora Presence ========== */
+/* ========== Arkan Protocol - Estilos adaptados de Agora Presence ========== */
 
 /* Header del Proyecto */
 header {
@@ -59,7 +59,7 @@ header img:hover {
 
 /* Secciones generales */
 section {
-    padding: 4rem 2rem;
+    padding: 4rem 6%;
     background-color: var(--color-background);
 }
 
@@ -67,25 +67,22 @@ section h2 {
     font-family: 'Kenyan', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background:var(--color-primary);
+    background: var(--color-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-align: left;
     padding-left: 1.5rem;
     border-left: 4px solid var(--color-primary);
-    display: inline-block;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    box-sizing: border-box;
 }
 section > p {
     font-size: 1.1rem;
     line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
     color: #ccc;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 3rem;
 }
 
 /* Funcionalidades Grid */
@@ -207,64 +204,182 @@ section > p {
     margin: 0;
 }
 
-/* Tecnologías Grid */
+/* =============================================
+   TECNOLOGÍAS — Rediseño visual completo
+   ============================================= */
+
 .tecnologias {
     background-color: var(--color-navbackground);
 }
 
+.tecnologias-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #aaa;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
 .tecnologias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .tecnologia-card {
-    background: linear-gradient(145deg, #1a1a1a, #121212);
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.4s ease;
-    border: 2px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    background: linear-gradient(145deg, #1c1c1c, #111111);
+    padding: 2rem 1.8rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+
+/* Línea de acento izquierda */
+.tecnologia-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--color-primary), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 16px 0 0 16px;
+}
+
+/* Brillo de fondo sutil en hover */
+.tecnologia-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top left, rgba(170, 130, 250, 0.07) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
 .tecnologia-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(170, 130, 250, 0.2);
-    border-color: rgba(170, 130, 250, 0.3);
+    box-shadow: 0 12px 35px rgba(170, 130, 250, 0.18);
+    border-color: rgba(170, 130, 250, 0.2);
 }
 
-.tecnologia-icon {
-    margin-bottom: 1.5rem;
-    display: block;
+.tecnologia-card:hover::before {
+    opacity: 1;
 }
 
-.tecnologia-icon svg {
-    width: 48px;
-    height: 48px;
+.tecnologia-card:hover::after {
+    opacity: 1;
+}
+
+/* Icono envuelto en caja */
+.tecnologia-icon-wrap {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(170, 130, 250, 0.1);
+    border: 1px solid rgba(170, 130, 250, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-top: 2px;
+}
+
+.tecnologia-card:hover .tecnologia-icon-wrap {
+    background: rgba(170, 130, 250, 0.2);
+    border-color: rgba(170, 130, 250, 0.45);
+    transform: scale(1.08);
+}
+
+.tecnologia-icon-wrap svg {
+    width: 26px;
+    height: 26px;
     fill: var(--color-text-hover);
-    margin: 0 auto;
+    transition: fill 0.3s ease;
+}
+
+/* SVGs que usan stroke en lugar de fill */
+.tecnologia-icon-wrap svg.stroke-icon {
+    fill: none;
+    stroke: var(--color-text-hover);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.tecnologia-card:hover .tecnologia-icon-wrap svg {
+    fill: #c8a8ff;
+}
+
+.tecnologia-card:hover .tecnologia-icon-wrap svg.stroke-icon {
+    fill: none;
+    stroke: #c8a8ff;
+}
+
+/* Texto de la card */
+.tecnologia-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.tecnologia-nombre {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 1.25rem;
+    color: var(--color-text-hover);
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.tecnologia-card:hover .tecnologia-nombre {
+    color: #d4b8ff;
+}
+
+.tecnologia-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #8b6cc7;
+    background: rgba(139, 108, 199, 0.12);
+    border: 1px solid rgba(139, 108, 199, 0.25);
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 0.3rem;
     transition: all 0.3s ease;
 }
 
-.tecnologia-card:hover .tecnologia-icon svg {
-    transform: scale(1.1);
-    fill: var(--color-primary);
+.tecnologia-card:hover .tecnologia-tag {
+    background: rgba(170, 130, 250, 0.2);
+    border-color: rgba(170, 130, 250, 0.4);
+    color: #c8a8ff;
 }
 
-.tecnologia-card h3 {
-    font-family: 'Kenyan', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: var(--color-text-hover);
-}
-
-.tecnologia-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
+.tecnologia-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #999;
     margin: 0;
+    transition: color 0.3s ease;
+}
+
+.tecnologia-card:hover .tecnologia-desc {
+    color: #bbb;
 }
 
 /* Acceder al Proyecto */
@@ -315,6 +430,35 @@ section > p {
 /* Estado del Proyecto */
 .estado-proyecto {
     background-color: var(--color-navbackground);
+}
+
+/* Wrapper interno para alinear todo el contenido de estado al mismo eje que el resto */
+.estado-container {
+    width: 100%;
+}
+
+.estado-header {
+    display: flex;
+    align-items: center;
+}
+
+.estado-descripcion {
+    max-width: 800px;
+}
+
+.estado-descripcion p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin: 0;
+}
+
+.hitos-section > h3 {
+    font-family: 'Kenyan', sans-serif;
+    font-size: 2rem;
+    margin: 3rem 0 2rem 0;
+    text-align: left;
+    color: var(--color-text-hover);
 }
 
 .estado-info {
@@ -384,13 +528,7 @@ section > p {
     color: #ccc;
 }
 
-.estado-proyecto h3 {
-    font-family: 'Kenyan', sans-serif;
-    font-size: 2rem;
-    margin: 3rem auto 2rem auto;
-    text-align: center;
-    color: var(--color-text-hover);
-}
+/* (el h3 de Próximos Hitos lo gestiona .hitos-section > h3) */
 
 .hitos-grid {
     display: grid;
@@ -434,14 +572,11 @@ section > p {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    /* Elimina o comenta cualquier position: relative que tengas */
 }
 
 .hito-icon {
-    /* Asegura que el icono vaya primero */
     order: 1;
     flex-shrink: 0;
-    /* Elimina position: absolute si lo tienes */
     position: static;
     width: 48px;
     height: 48px;
@@ -451,7 +586,6 @@ section > p {
 }
 
 .hito-content {
-    /* El contenido va después */
     order: 2;
     flex: 1;
 }
@@ -493,8 +627,11 @@ section > p {
     
     .funcionalidad-card,
     .flujo-item,
-    .tecnologia-card,
     .hito-item {
+        padding: 1.5rem;
+    }
+
+    .tecnologia-card {
         padding: 1.5rem;
     }
 
@@ -530,14 +667,12 @@ section > p {
         font-size: 1.4rem;
     }
     
-    .funcionalidad-icon svg,
-    .tecnologia-icon svg {
+    .funcionalidad-icon svg {
         width: 36px;
         height: 36px;
     }
     
-    .funcionalidad-card h3,
-    .tecnologia-card h3 {
+    .funcionalidad-card h3 {
         font-size: 1.3rem;
     }
 
@@ -551,5 +686,14 @@ section > p {
 
     .badge-text {
         font-size: 0.9rem;
+    }
+
+    .tecnologia-icon-wrap {
+        width: 44px;
+        height: 44px;
+    }
+
+    .tecnologia-nombre {
+        font-size: 1.1rem;
     }
 }
