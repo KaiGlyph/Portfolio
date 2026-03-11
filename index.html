@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordi Gallardo | FrontEnd Developer</title>
-    <meta name=”description” content="Portafolio de Jordi Gallardo. Programador Junior"> <link rel="icon" href="Images/Logos/KaiGlyphLogoBlanco.png" type="image/svg">
+    <meta name="description" content="Portafolio de Jordi Gallardo. Desarrollador Frontend Junior especializado en React, TypeScript y Power Platform">
+    <link rel="icon" href="Images/Logos/KaiGlyphLogoBlanco.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -44,20 +45,32 @@
 
     <header>
         <div id="home">
-            <h1>Jordi Gallardo | Programador Junior</h1>
-            <h3>Desarrollando mi potencial hasta ser el mejor</h3>
+            <h1>Jordi Gallardo</h1>
+            <h2 class="hero-title">Desarrollador Frontend Junior | Especializado en React</h2>
+            <p class="hero-subtitle">TypeScript • APIs • Power Platform • UI/UX</p>
+            <a href="#proyects" class="btn-primary">Ver mis proyectos</a>
         </div>
-        <img src="Images/Logos/KaiGlyphLogoBlanco.png" alt="Jordi Gallardo">
+        <img src="Images/Logos/KaiGlyphLogoBlanco.png" alt="KaiGlyph Logo" class="hero-logo">
     </header>
 
     <main>
         <section id="about">
             <div class="aboutme">
                 <h2>Sobre Mí</h2>
-                <p>Soy un programador junior con grandes ambiciones y deseando ser el mejor. 
-                    Sé que hay muchas personas competentes, pero a pesar de eso, pienso diferente a los demás, 
-                    analizando el mismo problema desde diferentes puntos de vista.</p>
-                <p>Además, me adapto fácilmente a cualquier entorno, siendo valido para varios puesto, pese a que prefiero tareas de diseño.</p>
+                <p class="about-intro">
+                    Desarrollador Frontend Junior con experiencia combinada en Power Platform (1 año) 
+                    y desarrollo de aplicaciones web modernas con React y TypeScript (1 año).
+                </p>
+                <p class="about-details">
+                    Me especializo en construir soluciones completas: desde autenticación con OAuth 
+                    hasta consumo de APIs y diseño de interfaces intuitivas. Mi enfoque combina 
+                    rigor técnico con atención al detalle en UX.
+                </p>
+                <p class="about-goals">
+                    Busco oportunidades como Frontend Developer donde pueda seguir creciendo,
+                    contribuir a productos reales y trabajar con tecnologías modernas como
+                    React y TypeScript.
+                </p>
                 <a href="PagesHTML/trayectoriaprofesional.html" class="btn-trayectoria">Ver Trayectoria Profesional</a>
                 <a href="Documents/CV Jordi Gallardo.pdf" download class="btn-cv">Descargar CV</a>
                 <a href="PagesHTML/certificados.html" class="btn-cv">Ver Certificados</a>
@@ -85,13 +98,13 @@
                         <div class="skill high" onclick="openModal('html')">HTML</div>
                         <div class="skill high" onclick="openModal('css')">CSS</div>
                         <div class="skill high" onclick="openModal('jira')">Jira</div>
+                        <div class="skill high" onclick="openModal('react')">React</div>
+                        <div class="skill high" onclick="openModal('typescript')">TypeScript</div>
+                        <div class="skill high" onclick="openModal('powerplatform')">Power Platform</div>
+                        <div class="skill high" onclick="openModal('github')">GitHub</div>
                         <div class="skill medium" onclick="openModal('js')">JavaScript</div>
-                        <div class="skill medium" onclick="openModal('react')">React</div>
-                        <div class="skill medium" onclick="openModal('typescript')">TypeScript</div>
                         <div class="skill medium" onclick="openModal('python')">Python</div>
-                        <div class="skill medium" onclick="openModal('github')">GitHub</div>
                         <div class="skill medium" onclick="openModal('mysql')">MySQL</div>
-                        <div class="skill medium" onclick="openModal('powerplatform')">Power Platform</div>
                         <div class="skill low" onclick="openModal('php')">PHP</div>
                         <div class="skill low" onclick="openModal('outsystems')">OutSystems</div>
                     </div>
@@ -107,36 +120,93 @@
             </div>
 
         </section>
+
         <section id="proyects">
             <h2>Mis Proyectos</h2>
-            <!-- Filtros -->
+            
+            <!-- Filtros mejorados con categorías de recruiter -->
             <div class="filtros-proyectos">
                 <button class="filtro-btn activo" data-filter="all">Todos</button>
+                <button class="filtro-btn" data-filter="featured">⭐ Destacados</button>
+                <button class="filtro-btn" data-filter="secondary">💼 Secundarios</button>
+                <button class="filtro-btn" data-filter="experiment">🧪 Experimentos</button>
+                <button class="filtro-btn" data-filter="react">React + TS</button>
                 <button class="filtro-btn" data-filter="powerplatform">Power Platform</button>
-                <button class="filtro-btn" data-filter="htmlcssjs">HTML | CSS | JS</button>
-                <button class="filtro-btn" data-filter="python">Python</button>
-                <button class="filtro-btn" data-filter="php">PHP</button>
-                <button class="filtro-btn" data-filter="reactts">React | TypeScript</button>
             </div>
+            
             <div class="tarjetas">
 
-                <a href="PagesHTML/proyecto_SupportCenter.html" class="tarjetaproyecto" data-category="powerplatform">
-                    <img src="Images/Proyectos/SupportCenterPortada.png" alt="Support Center - Gestor de Tareas" title="Support Center - Gestor de Incidencias">
+                <!-- 🏆 PROYECTOS DESTACADOS -->
+
+                <!-- Anikai -->
+                <a href="PagesHTML/proyecto_Anikai.html" class="tarjetaproyecto featured" data-category="featured react">
+                    <span class="badge-destacado">⭐ Destacado</span>
+                    <img src="Images/Proyectos/AnikaiPortada.png" alt="Anikai - Plataforma de Anime" title="Anikai">
                     <div class="texto-proyecto">
-                        <h3>Support Center</h3>
-                        <p>App empresarial para gestionar incidencias con Usuarios y Tecnicos, prioridad visual con colores y estados. Incluyendo graficas de Power BI.</p>
+                        <h3>Anikai</h3>
+                        <p class="project-description">Plataforma web de descubrimiento y seguimiento de anime con sistema de valoraciones y estadísticas personales.</p>
+                        <div class="project-details">
+                            <p><strong>Problema:</strong> Centralizar información dispersa de animes y permitir trackear progreso con datos personalizados.</p>
+                            <p><strong>Features:</strong> Catálogo con búsqueda, ranking por popularidad, perfil con estadísticas, autenticación OAuth (Google/Discord).</p>
+                        </div>
                         <div class="lenguajes">
-                            <span class="chip">Power Apps</span>
-                            <span class="chip">Power BI</span>
+                            <span class="chip">React</span>
+                            <span class="chip">TypeScript</span>
+                            <span class="chip">OAuth</span>
+                            <span class="chip">REST APIs</span>
+                            <span class="chip">Git</span>
                         </div>
                     </div>
                 </a>
 
-                <a href="PagesHTML/proyecto_PulseTask.html" class="tarjetaproyecto" data-category="powerplatform">
-                    <img src="Images/Proyectos/PulseTaskIntro.png" alt="PulseTask - Gestor de Tareas por Departamento" title="PulseTask - Gestor de Tareas por Departamento">
+                <!-- Aira ERP -->
+                <a href="PagesHTML/proyecto_AiraERP.html" class="tarjetaproyecto featured" data-category="featured Python">
+                    <span class="badge-destacado">⭐ Destacado</span>
+                    <img src="Images/Proyectos/AiraERP.png" alt="Aira ERP - Proyecto Final de Formación" title="Aira ERP">
+                    <div class="texto-proyecto">
+                        <h3>Aira ERP</h3>
+                        <p class="project-description">Sistema ERP modular desarrollado en equipo para gestión empresarial integral con roles y flujos de trabajo.</p>
+                        <div class="project-details">
+                            <p><strong>Problema:</strong> Unificar gestión de recursos, tareas y comunicación en un entorno colaborativo de formación.</p>
+                            <p><strong>Features:</strong> Arquitectura modular, gestión de roles, panel de administración, diseño responsive y trabajo en equipo ágil.</p>
+                        </div>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">Python</span>
+                            <span class="chip">Teamwork</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Gestión de Auditorías -->
+                <a href="PagesHTML/proyecto_GestorAuditorias.html" class="tarjetaproyecto featured" data-category="featured powerplatform">
+                    <span class="badge-destacado">⭐ Destacado</span>
+                    <img src="Images/Proyectos/GestiónAuditorias.png" alt="Gestión de Auditorías Internas" title="Gestión de Auditorías">
+                    <div class="texto-proyecto">
+                        <h3>Gestión de Auditorías</h3>
+                        <p class="project-description">Aplicación empresarial para gestionar auditorías internas con roles, flujos automatizados e informes en tiempo real.</p>
+                        <div class="project-details">
+                            <p><strong>Problema:</strong> Eliminar procesos manuales y descentralizados en la gestión de auditorías corporativas.</p>
+                            <p><strong>Features:</strong> Roles jerárquicos, flujos de aprobación automatizados, generación de informes PDF, dashboard de métricas.</p>
+                        </div>
+                        <div class="lenguajes">
+                            <span class="chip">Power Apps</span>
+                            <span class="chip">Power Automate</span>
+                            <span class="chip">SharePoint</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 🥈 PROYECTOS SECUNDARIOS -->
+
+                <!-- PulseTask -->
+                <a href="PagesHTML/proyecto_PulseTask.html" class="tarjetaproyecto secondary" data-category="secondary powerplatform">
+                    <img src="Images/Proyectos/PulseTaskIntro.png" alt="PulseTask - Gestor de Tareas por Departamento" title="PulseTask">
                     <div class="texto-proyecto">
                         <h3>PulseTask</h3>
-                        <p>App empresarial para gestionar tareas con asignación por departamento, prioridad visual con colores y estados. Incluye recordatorios automáticos.</p>
+                        <p class="project-description">App empresarial para gestionar tareas con asignación por departamento y recordatorios automáticos.</p>
                         <div class="lenguajes">
                             <span class="chip">Power Apps</span>
                             <span class="chip">Power Automate</span>
@@ -144,12 +214,70 @@
                     </div>
                 </a>
 
-                <!-- Proyectos React & TypeScript (en desarrollo) -->
-                <a href="PagesHTML/proyecto_ArkanProtocol.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/ArkanProtocolEjemplo.png" alt="Proyecto Arcan Protocol" title="Arcan Protocol">
+                <!-- Glyph Studio -->
+                <a href="PagesHTML/proyecto_GlyphStudio.html" class="tarjetaproyecto secondary" data-category="secondary react">
+                    <span class="badge-experiment">🧪 En desarrollo</span>
+                    <img src="Images/Proyectos/GlyphStudioEjemplo.png" alt="Glyph Studio - Plataforma Educativa" title="Glyph Studio">
+                    <div class="texto-proyecto">
+                        <h3>Glyph Studio</h3>
+                        <p class="project-description">Plataforma educativa para aprender temas de forma sencilla, práctica y accesible. Proyecto en desarrollo.</p>
+                        <div class="lenguajes">
+                            <span class="chip">React</span>
+                            <span class="chip">TypeScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Agora Presence -->
+                <a href="PagesHTML/proyecto_AgoraPresence.html" class="tarjetaproyecto secondary" data-category="secondary powerplatform">
+                    <img src="Images/Proyectos/PortadaAgoraPresence.png" alt="Agora Presence - Gestión de Asistencia" title="Agora Presence">
+                    <div class="texto-proyecto">
+                        <h3>Agora Presence</h3>
+                        <p class="project-description">Aplicación para gestionar asistencia presencial con flujos automatizados y asignación masiva de usuarios.</p>
+                        <div class="lenguajes">
+                            <span class="chip">Power Apps</span>
+                            <span class="chip">Power Automate</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Alta Empleados -->
+                <a href="PagesHTML/proyecto_AltaEmpleados.html" class="tarjetaproyecto secondary" data-category="secondary powerplatform">
+                    <img src="Images/Proyectos/AltaEmpleados.png" alt="Alta Empleados - Gestión de Equipos" title="Alta Empleados">
+                    <div class="texto-proyecto">
+                        <h3>Alta Empleados</h3>
+                        <p class="project-description">Automatización de procesos de alta de empleados y gestión de asignación de equipos mediante Power Automate.</p>
+                        <div class="lenguajes">
+                            <span class="chip">Power Automate</span>
+                            <span class="chip">SharePoint</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- KyanCosplay -->
+                <a href="PagesHTML/proyecto_kyan.html" class="tarjetaproyecto secondary" data-category="secondary htmlcssjs">
+                    <img src="Images/Proyectos/KyanCosplayWeb.png" alt="KyanCosplay - Tienda Online" title="KyanCosplay">
+                    <div class="texto-proyecto">
+                        <h3>KyanCosplay</h3>
+                        <p class="project-description">Tienda online de cosplay creada para proyecto de marketing, con catálogo, carrito y captación de clientes.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 🧪 EXPERIMENTOS / MINI PROYECTOS -->
+
+                <!-- Arkan Protocol -->
+                <a href="PagesHTML/proyecto_ArkanProtocol.html" class="tarjetaproyecto experiment" data-category="secondary react">
+                    <span class="badge-experiment">🧪 En desarrollo</span>
+                    <img src="Images/Proyectos/ArkanProtocolEjemplo.png" alt="Arkan Protocol - Sistema Gamificado" title="Arkan Protocol">
                     <div class="texto-proyecto">
                         <h3>Arkan Protocol</h3>
-                        <p>Sistema de desarrollo personal gamificado con misiones diarias, inventario y tienda. Proyecto en desarrollo.</p>
+                        <p class="project-description">Sistema de desarrollo personal gamificado con misiones diarias, inventario y tienda. Proyecto en desarrollo.</p>
                         <div class="lenguajes">
                             <span class="chip">React</span>
                             <span class="chip">TypeScript</span>
@@ -158,73 +286,12 @@
                     </div>
                 </a>
 
-                <a href="PagesHTML/proyecto_GlyphStudio.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/GlyphStudioEjemplo.png" alt="Proyecto Studio Glyph" title="Studio Glyph">
+                <!-- Vercon -->
+                <a href="PagesHTML/proyecto_Vercon.html" class="tarjetaproyecto experiment" data-category="experiment htmlcssjs">
+                    <img src="Images/Proyectos/Vercon.png" alt="Vercon - Conversor de Formatos" title="Vercon">
                     <div class="texto-proyecto">
-                        <h3>Glyph Studio</h3>
-                        <p>Plataforma educativa para aprender diferentes temas de forma sencilla, practica y accesible. Proyecto en desarrollo.</p>
-                        <div class="lenguajes">
-                            <span class="chip">React</span>
-                            <span class="chip">TypeScript</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="PagesHTML/proyecto_Anikai.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/AnikaiPortada.png" alt="Proyecto Anikai" title="Anikai">
-                    <div class="texto-proyecto">
-                        <h3>Anikai</h3>
-                        <p>Plataforma de anime con secciones, favoritos y organización de contenido para fans del anime. Proyecto en desarrollo.</p>
-                        <div class="lenguajes">
-                            <span class="chip">React</span>
-                            <span class="chip">TypeScript</span>
-                            <span class="chip">Vercel</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="PagesHTML/proyecto_AgoraPresence.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/PortadaAgoraPresence.png" alt="Proyecto Agora Presence" title="Agora Presence">
-                    <div class="texto-proyecto">
-                        <h3>Agora Presence</h3>
-                        <p>Aplicación para gestionar la asistencia presencial, flujos automatizados, asignacion masiva de usuarios y solicitud de cambio de día.</p>
-                        <div class="lenguajes">
-                            <span class="chip">Power Apps</span>
-                            <span class="chip">Power Automate</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="PagesHTML/proyecto_GestorAuditorias.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/GestiónAuditorias.png" alt="Proyecto de Gestión de Auditorías" title="Gestión de Auditorías">
-                    <div class="texto-proyecto">
-                        <h3>Gestión de Auditorías</h3>
-                        <p>Aplicación para gestionar auditorías internas con roles, flujos automatizados, generación de informes en tiempo real y mucho mas.</p>
-                        <div class="lenguajes">
-                            <span class="chip">Power Apps</span>
-                            <span class="chip">Power Automate</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="PagesHTML/proyecto_AiraERP.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/AiraERP.png" alt="Proyecto Aira ERP" title="Aira ERP">
-                    <div class="texto-proyecto">
-                        <h3>Aira ERP</h3>
-                        <p>Aplicación creada como proyecto final de formación para demostrar de lo que somos capaces de hacer todos los integrantes del equipo.</p>
-                        <div class="lenguajes">
-                            <span class="chip">HTML</span>
-                            <span class="chip">CSS</span>
-                            <span class="chip">Python</span>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="PagesHTML/proyecto_kyan.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/KyanCosplayWeb.png" alt="Proyecto KyanCosplay" title="KyanCosplay">
-                    <div class="texto-proyecto">
-                        <h3>KyanCosplay</h3>
-                        <p>Creada a partir de crear una empresa en la formación de Marketing, creando la tienda online además de captar más clientes.</p>
+                        <h3>Vercon</h3>
+                        <p class="project-description">Utilidad web para transformar formatos de imágenes, PDF y otros archivos de forma rápida y sencilla.</p>
                         <div class="lenguajes">
                             <span class="chip">HTML</span>
                             <span class="chip">CSS</span>
@@ -232,74 +299,57 @@
                         </div>
                     </div>
                 </a>
-            
-                <a href="PagesHTML/proyecto_AltaEmpleados.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/AltaEmpleados.png" alt="Proyecto Alta Empleados" title="Alta Empleados">
+
+                <!-- Kiyomi -->
+                <a href="PagesHTML/proyecto_kiyomi.html" class="tarjetaproyecto experiment" data-category="experiment htmlcssjs">
+                    <img src="Images/Proyectos/Kiyomi.png" alt="Kiyomi - Rediseño Restaurante Japonés" title="Kiyomi">
                     <div class="texto-proyecto">
-                        <h3>Alta Empleados</h3>
-                        <p>Utilización de Power Automate para crear en grupo un proyecto simulando una gestión para administrar el reparto de portátiles.</p>
+                        <h3>Kiyomi</h3>
+                        <p class="project-description">Rediseño UX/UI de página web de restaurante japonés, mejorando navegación, estética y experiencia móvil.</p>
                         <div class="lenguajes">
-                            <span class="chip">Power Automate</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
                         </div>
                     </div>
                 </a>
-            
-                <a href="PagesHTML/proyecto_FairyPaws.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/FairyPaws.png" alt="Proyecto" title="FairyPaws">
+
+                <!-- YoruNeko -->
+                <a href="PagesHTML/proyecto_YoruNeko.html" class="tarjetaproyecto experiment" data-category="experiment htmlcssjs">
+                    <img src="Images/Proyectos/YoruNeko.png" alt="YoruNeko - Restaurante Japonés Ficticio" title="YoruNeko">
+                    <div class="texto-proyecto">
+                        <h3>YoruNeko</h3>
+                        <p class="project-description">Página web de restaurante japonés ficticio, proyecto personal inspirado en mi pasión por la cultura nipona.</p>
+                        <div class="lenguajes">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- FairyPaws -->
+                <a href="PagesHTML/proyecto_FairyPaws.html" class="tarjetaproyecto experiment" data-category="experiment php">
+                    <img src="Images/Proyectos/FairyPaws.png" alt="FairyPaws - Formulario con MySQL" title="FairyPaws">
                     <div class="texto-proyecto">
                         <h3>FairyPaws</h3>
-                        <p>Página web creada para examen de formularios. En dicho examen se ha creado un formulario que se enlaza con una base de datos de MySQL.</p>
+                        <p class="project-description">Ejercicio académico de formularios con validación, conexión a MySQL y persistencia de datos en backend PHP.</p>
                         <div class="lenguajes">
                             <span class="chip">HTML</span>
                             <span class="chip">CSS</span>
                             <span class="chip">JS</span>
                             <span class="chip">PHP</span>
+                            <span class="chip">MySQL</span>
                         </div>
                     </div>
                 </a>
-                <a href="PagesHTML/proyecto_Vercon.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/Vercon.png" alt="Proyecto" title="Vercon">
-                    <div class="texto-proyecto">
-                        <h3>Vercon</h3>
-                        <p>Creado para solucionar problemas de encontrar una página que transforme distintos formatos ya sean de imágenes, PDF...</p>
-                        <div class="lenguajes">
-                            <span class="chip">HTML</span>
-                            <span class="chip">CSS</span>
-                            <span class="chip">JS</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="PagesHTML/proyecto_kiyomi.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/Kiyomi.png" alt="Proyecto Kiyomi" title="Kiyomi">
-                    <div class="texto-proyecto">
-                        <h3>Kiyomi</h3>
-                        <p>Rediseño de una página web de un restaurante japonés ya que la original que tiene dicho restaurante me parecía demasiado simple.</p>
-                        <div class="lenguajes">
-                            <span class="chip">HTML</span>
-                            <span class="chip">CSS</span>
-                            <span class="chip">JS</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="PagesHTML/proyecto_YoruNeko.html" class="tarjetaproyecto">
-                    <img src="Images/Proyectos/YoruNeko.png" alt="Proyecto YoruNeko" title="YoruNeko">
-                    <div class="texto-proyecto">
-                        <h3>YoruNeko</h3>
-                        <p>Creación de una página web de un restaurante japonés ficticio debido a mi gusto por la cultura y gastronomía japonesa.</p>
-                        <div class="lenguajes">
-                            <span class="chip">HTML</span>
-                            <span class="chip">CSS</span>
-                            <span class="chip">JS</span>
-                        </div>
-                    </div>
-                </a>
+
             </div>
         </section>
 
         <section id="teamwork" class="valoraciones">
             <h2>Valoraciones</h2>
             <div class="carousel-container">
-                <!--<button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>-->
                 <div class="carousel-track" id="carouselTrack">
                     <div class="testimonio">
                         <p>"Tienes mucha iniciativa por enseñar a los que no saben."</p>
@@ -311,26 +361,25 @@
                         <h4>Albert E. | KyanCosplay - Alta Empleados</h4>
                     </div>
                     <div class="testimonio">
-                        <p>"Trabajar con Jordi  ha sido muy positivo. Es una persona comprometida, responsable y muy detallista, especialmente en el diseño. Siempre busca la excelencia en todo lo que hace. Esa combinación de exigencia consigo mismo y constancia hace que trabajar con él sea garantía de calidad y de resultados bien pensado. Tiene ideas muy claras y, aunque defiende firmemente su punto de vista, también es paciente y sabe trabajar en equipo."</p> <h4>Alhida L. | Aira ERP</h4>
+                        <p>"Trabajar con Jordi ha sido muy positivo. Es una persona comprometida, responsable y muy detallista, especialmente en el diseño. Siempre busca la excelencia en todo lo que hace. Esa combinación de exigencia consigo mismo y constancia hace que trabajar con él sea garantía de calidad y de resultados bien pensado. Tiene ideas muy claras y, aunque defiende firmemente su punto de vista, también es paciente y sabe trabajar en equipo."</p> <h4>Alhida L. | Aira ERP</h4>
                     </div>
                 </div>
-                <!--<button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>-->
             </div>
         </section>
 
         <section id="contact" class="">
             <h2>Contáctame</h2>
             <form action="https://formsubmit.co/jordigallardo0621@gmail.com" method="post">
-                <input type="text" name="name" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo" required>
-                <textarea name="message" placeholder="Tu Mensaje"></textarea>
+                <input type="text" name="name" placeholder="Tu Nombre" required aria-label="Tu nombre">
+                <input type="email" name="email" placeholder="Tu Correo" required aria-label="Tu correo electrónico">
+                <textarea name="message" placeholder="Tu Mensaje" aria-label="Tu mensaje"></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Jordi Gallardo. Todos los derechos reservados.</p>
+        <p>© 2026 Jordi Gallardo. Todos los derechos reservados.</p>
         <p class="firma-artistica">Diseño y Trabajo de: <strong>KaiGlyph</strong></p>
         <div class="footer-social">
             <a href="https://github.com/KaiGlyph" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
@@ -352,6 +401,5 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

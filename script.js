@@ -139,7 +139,7 @@ window.addEventListener('click', (e) => {
 // Función para el carousel de valoraciones
 function scrollCarousel(direction) {
     const track = document.getElementById('carouselTrack');
-    const scrollAmount = 400; 
+    const scrollAmount = 400;
     
     if (direction === 1) {
         track.scrollLeft += scrollAmount;
@@ -168,7 +168,7 @@ function stopAutoScroll() {
     clearInterval(autoScrollInterval);
 }
 
-// Filtro de proyectos
+// Filtro de proyectos - versión mejorada con categorías de recruiter
 function filtrarProyectos(filterType) {
     const filterButtons = document.querySelectorAll('.filtro-btn');
     const tarjetasProyecto = document.querySelectorAll('.tarjetaproyecto');
@@ -180,8 +180,8 @@ function filtrarProyectos(filterType) {
     event.target.classList.add('activo');
     
     tarjetasProyecto.forEach(tarjeta => {
-        const lenguajes = tarjeta.querySelectorAll('.lenguajes .chip');
-        const lenguajesArray = Array.from(lenguajes).map(chip => chip.textContent.trim().toLowerCase());
+        const category = tarjeta.getAttribute('data-category') || '';
+        const categories = category.split(' ');
         
         let mostrar = false;
         
@@ -190,51 +190,57 @@ function filtrarProyectos(filterType) {
                 mostrar = true;
                 break;
                 
+            case 'featured':
+                mostrar = categories.includes('featured');
+                break;
+                
+            case 'secondary':
+                mostrar = categories.includes('secondary');
+                break;
+                
+            case 'experiment':
+                mostrar = categories.includes('experiment');
+                break;
+                
+            case 'react':
+                mostrar = categories.includes('react');
+                break;
+                
             case 'powerplatform':
-                // Verificar si tiene Power Apps o Power Automate
-                mostrar = lenguajesArray.some(lenguaje => 
-                    lenguaje.includes('power apps') || 
-                    lenguaje.includes('power automate')
-                );
+                mostrar = categories.includes('powerplatform');
                 break;
                 
             case 'htmlcssjs':
-                // Verificar si tiene HTML, CSS y JS juntos
+                const lenguajes = tarjeta.querySelectorAll('.lenguajes .chip');
+                const lenguajesArray = Array.from(lenguajes).map(chip => chip.textContent.trim().toLowerCase());
                 const tieneHTML = lenguajesArray.includes('html');
                 const tieneCSS = lenguajesArray.includes('css');
                 const tieneJS = lenguajesArray.includes('js');
-                
                 mostrar = tieneHTML && tieneCSS && tieneJS;
                 break;
                 
             case 'python':
-                // Verificar si tiene Python
-                mostrar = lenguajesArray.includes('python');
+                mostrar = category.includes('python');
                 break;
                 
             case 'php':
-                // Verificar si tiene PHP
-                mostrar = lenguajesArray.includes('php');
-                break;
-                
-            case 'reactts':
-                // Verificar si tiene React Y TypeScript juntos
-                const tieneReact = lenguajesArray.includes('react');
-                const tieneTypeScript = lenguajesArray.includes('typescript') || lenguajesArray.includes('type script');
-                
-                mostrar = tieneReact && tieneTypeScript;
+                mostrar = category.includes('php');
                 break;
         }
         
+        // Animación de entrada/salida
         if (mostrar) {
             tarjeta.style.display = 'block';
-            tarjeta.style.opacity = '0';
             setTimeout(() => {
                 tarjeta.style.opacity = '1';
                 tarjeta.style.transform = 'translateY(0)';
             }, 10);
         } else {
-            tarjeta.style.display = 'none';
+            tarjeta.style.opacity = '0';
+            tarjeta.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+                tarjeta.style.display = 'none';
+            }, 300);
         }
     });
 }
